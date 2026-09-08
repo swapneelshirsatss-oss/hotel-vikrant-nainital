@@ -17,7 +17,6 @@ export default function GalleryPage() {
     { id: "views", label: "Mountain & Lake Views" },
     { id: "dining", label: "In-Room Dining" },
     { id: "exterior", label: "Exterior & Facade" },
-    { id: "reception", label: "Lobby & Reception" },
   ];
 
   const filteredImages =

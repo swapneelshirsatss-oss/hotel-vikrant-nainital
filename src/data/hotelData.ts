@@ -54,11 +54,18 @@ export interface FAQ {
   category: "Booking" | "Location" | "Amenities" | "Dining";
 }
 
+export interface SisterProperty {
+  name: string;
+  location: string;
+  url: string;
+  description: string;
+}
+
 export interface GalleryItem {
   id: string;
   src: string;
   title: string;
-  category: "rooms" | "exterior" | "views" | "dining" | "reception";
+  category: "rooms" | "exterior" | "views" | "dining";
   alt: string;
 }
 
@@ -392,12 +399,31 @@ export const HOTEL_DATA = {
     { id: "g7", src: "/images/gallery/IMG_8042.webp", title: "Modern Clean Bathroom", category: "rooms", alt: "Sanitized private bathroom with hot water geyser" },
     { id: "g8", src: "/images/gallery/IMG_8040.webp", title: "Upper Mall Road Frontage", category: "exterior", alt: "Hotel Vikrant front entrance and road access" },
     { id: "g9", src: "/images/gallery/IMG_7951.webp", title: "Naini Lake 300m Away", category: "views", alt: "View towards Naini Lake and Tallital promenade" },
-    { id: "g10", src: "/images/gallery/IMG_7954.webp", title: "Reception & Lobby Area", category: "reception", alt: "Welcoming front desk lobby at Hotel Vikrant" },
-    { id: "g11", src: "/images/gallery/IMG_7958.webp", title: "Guest Corridor & Access", category: "reception", alt: "Clean sanitized hallway corridors" },
     { id: "g12", src: "/images/gallery/IMG_7998.webp", title: "Fresh In-Room Dining Service", category: "dining", alt: "Home-cooked hot meal service for hotel guests" },
     { id: "g13", src: "/images/gallery/IMG_8001.webp", title: "Freshly Cooked Breakfast", category: "dining", alt: "Hot breakfast served fresh to guest rooms" },
     { id: "g14", src: "/images/gallery/IMG_8037.webp", title: "Himalayan Ridge View", category: "views", alt: "Sunny mountain ridges overlooking Nainital" },
     { id: "g15", src: "/images/gallery/IMG_8050.webp", title: "Family Suite Seating Area", category: "rooms", alt: "Comfortable seating setup inside 4-bed family suite" },
     { id: "g16", src: "/images/gallery/IMG_8058.webp", title: "Nainital Pine Forests", category: "views", alt: "Pine forest scenery surrounding Zoo Road" },
   ] as GalleryItem[],
+
+  sisterProperties: [
+    {
+      name: "Casa De Bello Resort Kainchi Dham",
+      location: "Kainchi Dham, Uttarakhand",
+      url: "https://casadebello.com/",
+      description: "Serene boutique resort near the sacred Neem Karoli Baba Ashram, offering peaceful luxury and scenic Himalayan vistas.",
+    },
+    {
+      name: "Casa De Bello Resort Ramgarh - Whispering Pines",
+      location: "Ramgarh, Uttarakhand",
+      url: "https://whisperingpinesresort.in/",
+      description: "Picturesque hill resort set amidst lush fruit orchards and whispering pine forests with majestic snow peak views.",
+    },
+    {
+      name: "Anurra Restaurant & Hotel",
+      location: "Kainchi Dham, Uttarakhand",
+      url: "https://anurrakainchidhamhotel.in/",
+      description: "Comfortable rooms and authentic multi-cuisine dining experience right in the heart of Kainchi Dham.",
+    },
+  ] as SisterProperty[],
 };

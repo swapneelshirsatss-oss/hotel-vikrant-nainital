@@ -193,6 +193,57 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Our Hotels & Resorts / Sister Properties Showcase */}
+        <div className="py-10 border-b border-white/10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-6">
+            <div>
+              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-semibold tracking-wider uppercase text-[#D4A437] mb-2">
+                <span>Our Hospitality Collection</span>
+              </div>
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-white tracking-tight">
+                Our Hotels &amp; Resorts
+              </h3>
+            </div>
+            <p className="text-xs text-[#F4E6D2]/75 max-w-lg leading-relaxed">
+              Explore our curated sister retreats and boutique stays across Kainchi Dham and Ramgarh, Uttarakhand.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+            {HOTEL_DATA.sisterProperties.map((hotel) => (
+              <a
+                key={hotel.name}
+                href={hotel.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative p-5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-[#D4A437]/60 transition-all duration-200 flex flex-col justify-between shadow-xs hover:-translate-y-0.5"
+              >
+                <div>
+                  <div className="flex items-start justify-between gap-3">
+                    <span className="font-serif font-bold text-base text-white group-hover:text-[#D4A437] transition-colors leading-snug">
+                      {hotel.name}
+                    </span>
+                    <span className="w-7 h-7 rounded-full bg-white/5 group-hover:bg-[#D4A437]/20 flex items-center justify-center shrink-0 transition-colors">
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[#D4A437] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </span>
+                  </div>
+                  <span className="inline-block text-[11px] text-[#D4A437] font-medium mt-1">
+                    {hotel.location}
+                  </span>
+                  <p className="text-xs text-[#F4E6D2]/75 mt-2.5 leading-relaxed line-clamp-2">
+                    {hotel.description}
+                  </p>
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-[#F4E6D2]/90 font-medium group-hover:text-white">
+                  <span>Explore Resort</span>
+                  <span className="text-[#D4A437] group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F4E6D2]/60">
           <p>© {new Date().getFullYear()} {HOTEL_DATA.name}. All rights reserved.</p>

@@ -80,8 +80,8 @@ export default function AboutPage() {
                 </div>
                 <div className="relative h-44 rounded-2xl overflow-hidden shadow-xs border-2 border-white">
                   <Image
-                    src="/images/gallery/IMG_7954.webp"
-                    alt="Lobby reception desk"
+                    src="/images/gallery/IMG_8044.webp"
+                    alt="Deluxe Mountain View Room"
                     fill
                     className="object-cover"
                     sizes="25vw"
