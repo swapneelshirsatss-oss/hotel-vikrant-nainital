@@ -420,7 +420,7 @@ export const HOTEL_DATA = {
       description: "Picturesque hill resort set amidst lush fruit orchards and whispering pine forests with majestic snow peak views.",
     },
     {
-      name: "Anurra Restaurant and Hotel",
+      name: "Anurra Restaurant & Hotel Kainchi Dham",
       location: "Kainchi Dham, Uttarakhand",
       url: "https://anurrakainchidhamhotel.in/",
       description: "Comfortable rooms and authentic multi-cuisine dining experience right in the heart of Kainchi Dham.",
