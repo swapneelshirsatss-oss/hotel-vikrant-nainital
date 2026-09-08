@@ -414,13 +414,13 @@ export const HOTEL_DATA = {
       description: "Serene boutique resort near the sacred Neem Karoli Baba Ashram, offering peaceful luxury and scenic Himalayan vistas.",
     },
     {
-      name: "Casa De Bello Resort Ramgarh - Whispering Pines",
+      name: "Casa De Bello Resort Ramgarh - Whispering Pines Uttarakhand",
       location: "Ramgarh, Uttarakhand",
       url: "https://whisperingpinesresort.in/",
       description: "Picturesque hill resort set amidst lush fruit orchards and whispering pine forests with majestic snow peak views.",
     },
     {
-      name: "Anurra Restaurant & Hotel",
+      name: "Anurra Restaurant and Hotel",
       location: "Kainchi Dham, Uttarakhand",
       url: "https://anurrakainchidhamhotel.in/",
       description: "Comfortable rooms and authentic multi-cuisine dining experience right in the heart of Kainchi Dham.",
