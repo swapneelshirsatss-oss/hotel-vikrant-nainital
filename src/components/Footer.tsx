@@ -12,13 +12,13 @@ export default function Footer() {
           {/* Col 1: Brand & Overview */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-full p-1 bg-white/10 flex items-center justify-center border border-[#D4A437]/40">
+              <div className="w-11 h-11 rounded-full p-1.5 bg-[#FAF5ED] flex items-center justify-center border border-[#D4A437]/50 shadow-sm shrink-0">
                 <Image
                   src="/images/logo/hotel-vikrant-logo.svg"
                   alt="Hotel Vikrant Nainital Logo"
-                  width={40}
-                  height={40}
-                  className="w-full h-full object-contain brightness-110"
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>
