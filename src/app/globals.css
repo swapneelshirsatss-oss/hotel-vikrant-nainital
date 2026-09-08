@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #5B3A29;
+  --color-primary-dark: #42281A;
+  --color-primary-light: #7E523A;
+  --color-secondary: #F4E6D2;
+  --color-secondary-light: #FAF5ED;
+  --color-accent: #2E5D4B;
+  --color-accent-dark: #1E3F33;
+  --color-accent-light: #3D7A63;
+  --color-cta: #D4A437;
+  --color-cta-hover: #BF912A;
+  --color-gold: #D4A437;
+  --color-charcoal: #1C1917;
+  --color-charcoal-muted: #57534E;
+  --color-cream: #FAF8F5;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF8F5;
+  --foreground: #1C1917;
+  --primary: #5B3A29;
+  --primary-dark: #42281A;
+  --secondary: #F4E6D2;
+  --accent: #2E5D4B;
+  --cta: #D4A437;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  text-wrap: balance;
+  letter-spacing: -0.015em;
+}
+
+p {
+  text-wrap: pretty;
+  line-height: 1.65;
+}
+
+/* Premium shadows & glows */
+.shadow-premium {
+  box-shadow: 0 4px 20px -2px rgba(91, 58, 41, 0.08), 0 2px 6px -1px rgba(91, 58, 41, 0.04);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 12px 36px -4px rgba(91, 58, 41, 0.12), 0 4px 12px -2px rgba(91, 58, 41, 0.06);
+}
+
+.shadow-gold-glow {
+  box-shadow: 0 4px 24px 0 rgba(212, 164, 55, 0.35);
+}
+
+.shadow-whatsapp-glow {
+  box-shadow: 0 4px 20px 0 rgba(37, 211, 102, 0.4);
+}
+
+/* Glassmorphic backdrop */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(91, 58, 41, 0.08);
+}
+
+.glass-dark {
+  background: rgba(43, 27, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(244, 230, 210, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(244, 230, 210, 0.6);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF5ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4A897;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5B3A29;
 }
