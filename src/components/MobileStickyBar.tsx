@@ -18,7 +18,7 @@ export default function MobileStickyBar({ onOpenBookingModal }: MobileStickyBarP
       <div className="grid grid-cols-3 gap-2">
         {/* Call Now */}
         <a
-          href={`tel:${HOTEL_DATA.phone}`}
+          href={HOTEL_DATA.phoneTel}
           className="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-[#FAF5ED] border border-[#5B3A29]/15 text-[#5B3A29] active:bg-[#F4E6D2] transition-colors"
         >
           <Phone className="w-4 h-4 text-[#2E5D4B]" />

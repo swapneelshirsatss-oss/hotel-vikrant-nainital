@@ -23,11 +23,15 @@ import AmenitiesGrid from "@/components/AmenitiesGrid";
 import AttractionCard from "@/components/AttractionCard";
 import GoogleReviews from "@/components/GoogleReviews";
 import FaqAccordion from "@/components/FaqAccordion";
+import TransitMatrix from "@/components/TransitMatrix";
+import JsonLd from "@/components/JsonLd";
 import { HOTEL_DATA } from "@/data/hotelData";
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd type="home" />
+
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[88vh] sm:min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#2B1B12]">
         {/* Background Image Banner */}
@@ -79,7 +83,7 @@ export default function HomePage() {
             </a>
 
             <a
-              href={`tel:${HOTEL_DATA.phone}`}
+              href={HOTEL_DATA.phoneTel}
               className="w-full sm:w-auto px-7 py-4 rounded-full bg-white/15 hover:bg-white/25 text-white border border-white/30 backdrop-blur-md font-bold text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95"
             >
               <Phone className="w-4 h-4 text-[#D4A437]" />
@@ -87,7 +91,7 @@ export default function HomePage() {
             </a>
 
             <Link
-              href="/gallery"
+              href="/gallery/"
               className="w-full sm:w-auto px-6 py-4 rounded-full bg-black/40 hover:bg-black/60 text-[#F4E6D2] border border-white/10 backdrop-blur-md font-semibold text-sm flex items-center justify-center gap-1.5 transition-colors"
             >
               <span>View Gallery</span>
@@ -119,6 +123,17 @@ export default function HomePage() {
 
       {/* 2. DIRECT BOOKING BAR */}
       <DirectBookingBar />
+
+      {/* AEO Direct Answer Block for AI Search & Google Rich Snippets */}
+      <section className="bg-stone-100 border-b border-stone-200/80 py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="aeo-answer-block bg-white p-4 sm:p-5 rounded-2xl border border-stone-200/80 shadow-2xs text-xs sm:text-sm text-stone-700 leading-relaxed">
+            <p>
+              <strong className="text-[#5B3A29]">Direct Answer:</strong> Hotel Vikrant Nainital is a family-oriented hotel situated on Zoo Road, Upper Mall Road, Tallital (PIN 263001). Located just 300 meters (4-minute walk) from Naini Lake, the hotel features Deluxe Mountain View Rooms and 4-Bedded Family Suites with attached bathrooms, 24×7 geyser hot water, 100% power backup, high-speed fiber Wi-Fi, and fresh in-room dining. Guests save 10% to 15% by booking directly on WhatsApp (+91 82795 61741).
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* 3. ABOUT HOTEL VIKRANT OVERVIEW */}
       <section className="py-20 sm:py-28 bg-[#FAF8F5] overflow-hidden">
@@ -168,7 +183,7 @@ export default function HomePage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
-                  href="/about"
+                  href="/about/"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#5B3A29] hover:bg-[#42281A] text-white font-semibold text-xs tracking-wide shadow-premium transition-all hover:scale-105"
                 >
                   <span>Read Our Full Story</span>
@@ -176,7 +191,7 @@ export default function HomePage() {
                 </Link>
 
                 <a
-                  href={`tel:${HOTEL_DATA.phone}`}
+                  href={HOTEL_DATA.phoneTel}
                   className="inline-flex items-center gap-2 text-xs font-bold text-[#5B3A29] hover:underline"
                 >
                   <Phone className="w-4 h-4 text-[#2E5D4B]" />
@@ -361,7 +376,7 @@ export default function HomePage() {
 
           <div className="mt-12 text-center">
             <Link
-              href="/rooms"
+              href="/rooms/"
               className="inline-flex items-center gap-2 text-sm font-bold text-[#5B3A29] hover:text-[#2E5D4B] transition-colors"
             >
               <span>Compare all room features, floor layouts & amenities</span>
@@ -391,7 +406,7 @@ export default function HomePage() {
             </div>
 
             <Link
-              href="/attractions"
+              href="/attractions/"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FAF5ED] hover:bg-[#F4E6D2] text-[#5B3A29] font-bold text-xs border border-[#5B3A29]/20 transition-colors shrink-0 self-start md:self-auto"
             >
               <span>View Full Attractions Guide</span>
@@ -427,7 +442,7 @@ export default function HomePage() {
             </div>
 
             <Link
-              href="/gallery"
+              href="/gallery/"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#5B3A29] hover:bg-[#42281A] text-white font-bold text-xs shadow-premium transition-all hover:scale-105 shrink-0 self-start md:self-auto"
             >
               <span>Open Full Photo Gallery (50+ Photos)</span>
@@ -440,7 +455,7 @@ export default function HomePage() {
             {HOTEL_DATA.galleryImages.slice(0, 6).map((item, idx) => (
               <Link
                 key={item.id}
-                href="/gallery"
+                href="/gallery/"
                 className={`relative rounded-2xl overflow-hidden shadow-xs hover:shadow-premium group transition-all ${
                   idx === 0 || idx === 3 ? "lg:col-span-2 h-64 sm:h-80" : "h-64 sm:h-80"
                 }`}
@@ -483,8 +498,8 @@ export default function HomePage() {
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF8F5] border border-stone-200">
                   <MapPin className="w-4 h-4 text-[#2E5D4B] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-stone-900 block">Address</span>
-                    <span>Zoo Road, Upper Mall Road, Nainital, Uttarakhand 263001</span>
+                    <span className="font-bold text-stone-900 block">Canonical Address</span>
+                    <span>{HOTEL_DATA.fullAddress}</span>
                   </div>
                 </div>
 
@@ -492,7 +507,7 @@ export default function HomePage() {
                   <Compass className="w-4 h-4 text-[#D4A437] shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold text-stone-900 block">From Kathgodam Railway Station</span>
-                    <span>34 km (~1 hour scenic drive by hill taxi / sharing cab).</span>
+                    <span>34 km (~1 hour scenic drive via NH-109 by hill taxi / sharing cab).</span>
                   </div>
                 </div>
 
@@ -500,24 +515,24 @@ export default function HomePage() {
                   <MapPin className="w-4 h-4 text-[#5B3A29] shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold text-stone-900 block">From Tallital Bus Stand</span>
-                    <span>Just 400 meters. Quick 5-minute walk up Zoo Road.</span>
+                    <span>Just 400 meters. Quick 4-5 minute walk up Zoo Road.</span>
                   </div>
                 </div>
               </div>
 
               <div className="pt-2 flex flex-wrap gap-3">
                 <a
-                  href={HOTEL_DATA.googleMapsUrl}
+                  href={HOTEL_DATA.googleMapsCidUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 rounded-full bg-[#5B3A29] hover:bg-[#42281A] text-white font-bold text-xs shadow-premium inline-flex items-center gap-2 transition-all hover:scale-105"
                 >
                   <MapPin className="w-4 h-4 text-[#D4A437]" />
-                  <span>Open in Google Maps</span>
+                  <span>Open Google Maps Place (CID: {HOTEL_DATA.googleMapsCid})</span>
                 </a>
 
                 <a
-                  href={`tel:${HOTEL_DATA.phone}`}
+                  href={HOTEL_DATA.phoneTel}
                   className="px-6 py-3 rounded-full bg-[#FAF5ED] hover:bg-[#F4E6D2] text-[#5B3A29] font-bold text-xs border border-[#5B3A29]/20 inline-flex items-center gap-2 transition-colors"
                 >
                   <Phone className="w-4 h-4 text-[#2E5D4B]" />
@@ -530,7 +545,7 @@ export default function HomePage() {
             <div className="lg:col-span-7 h-[420px] rounded-3xl overflow-hidden shadow-premium-lg border-2 border-stone-200 relative bg-stone-100">
               <iframe
                 title="Hotel Vikrant Nainital Google Maps Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.4312689531835!2d79.46316097587823!3d29.380909349887713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a1f0a200a89d%3A0x6b8dd72cb6580556!2sHotel%20Vikrant!5e0!3m2!1sen!2sin!4v1709800000000!5m2!1sen!2sin"
+                src={HOTEL_DATA.googleMapsEmbedUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -539,6 +554,11 @@ export default function HomePage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
+          </div>
+
+          {/* Embedded Multi-Modal Transit Matrix */}
+          <div className="mt-14">
+            <TransitMatrix />
           </div>
         </div>
       </section>
@@ -571,7 +591,7 @@ export default function HomePage() {
               <span>Chat with Host on WhatsApp</span>
             </a>
             <a
-              href={`tel:${HOTEL_DATA.phone}`}
+              href={HOTEL_DATA.phoneTel}
               className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#5B3A29] hover:bg-[#42281A] text-white font-bold text-xs shadow-premium flex items-center justify-center gap-2 transition-all hover:scale-105"
             >
               <Phone className="w-4 h-4 text-[#D4A437]" />

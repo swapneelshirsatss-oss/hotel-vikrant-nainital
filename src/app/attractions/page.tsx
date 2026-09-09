@@ -1,20 +1,11 @@
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import {
-  MapPin,
-  Clock,
-  Navigation,
   Compass,
   Trees,
-  Landmark,
   MountainSnow,
-  Footprints,
   ShoppingBag,
-  Sparkles,
-  ArrowRight,
-  Phone,
 } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
@@ -25,19 +16,19 @@ export const metadata: Metadata = {
   description:
     "Explore top attractions near Hotel Vikrant Nainital. Naini Lake (300m), Mall Road, High Altitude Zoo on Zoo Road, Naina Devi Temple, and Snow View Point. Plan your Nainital sightseeing.",
   alternates: {
-    canonical: `${HOTEL_DATA.websiteUrl}/attractions`,
+    canonical: `${HOTEL_DATA.websiteUrl}/attractions/`,
   },
   openGraph: {
     title: "Nearby Attractions | Hotel Vikrant Nainital",
     description: "Sightseeing guide for Naini Lake, Mall Road, High Altitude Zoo, and Himalayan viewpoints near Hotel Vikrant.",
-    url: `${HOTEL_DATA.websiteUrl}/attractions`,
+    url: `${HOTEL_DATA.websiteUrl}/attractions/`,
   },
 };
 
 export default function AttractionsPage() {
   const breadcrumbItems = [
-    { name: "Home", url: HOTEL_DATA.websiteUrl },
-    { name: "Nearby Attractions", url: `${HOTEL_DATA.websiteUrl}/attractions` },
+    { name: "Home", url: `${HOTEL_DATA.websiteUrl}/` },
+    { name: "Nearby Attractions", url: `${HOTEL_DATA.websiteUrl}/attractions/` },
   ];
 
   return (
@@ -64,6 +55,17 @@ export default function AttractionsPage() {
           <p className="mt-4 text-sm sm:text-base text-[#F4E6D2] max-w-2xl mx-auto">
             Stay only 300 meters from Naini Lake. Walk to boats, lakeside promenades, and the Zoo Road wildlife sanctuary with ease.
           </p>
+        </div>
+      </section>
+
+      {/* AEO Direct Answer Block for AI Search & Featured Snippets */}
+      <section className="bg-stone-100 border-b border-stone-200/80 py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="aeo-answer-block bg-white p-4 sm:p-5 rounded-2xl border border-stone-200/80 shadow-2xs text-xs sm:text-sm text-stone-700 leading-relaxed">
+            <p>
+              <strong className="text-[#5B3A29]">Direct Answer:</strong> Top attractions directly accessible from Hotel Vikrant include Naini Lake (300 meters, 4-min walk), Mall Road and Tallital Bazaar (300 meters, 4-min walk), Pt. G.B. Pant High Altitude Zoo (800 meters along Zoo Road), Maa Naina Devi Shaktipeeth Temple (1.2 km, 15-min walk), Snow View Point (2.5 km), and Neem Karoli Baba Kainchi Dham Ashram (18 km, 40-min drive).
+            </p>
+          </div>
         </div>
       </section>
 

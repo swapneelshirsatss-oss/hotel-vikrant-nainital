@@ -81,7 +81,7 @@ export default function AmenitiesGrid() {
         {/* Bottom CTA bar */}
         <div className="mt-12 text-center">
           <Link
-            href="/amenities"
+            href="/amenities/"
             className="inline-flex items-center gap-2 text-sm font-bold text-[#5B3A29] hover:text-[#2E5D4B] transition-colors group"
           >
             <span>Learn more about In-Room Dining & Guest Services</span>

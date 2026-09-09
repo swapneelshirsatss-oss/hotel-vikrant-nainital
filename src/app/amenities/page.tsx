@@ -9,13 +9,9 @@ import {
   Zap,
   MapPin,
   Sparkles,
-  Mountain,
   Clock,
   Coffee,
   CheckCircle2,
-  CalendarCheck,
-  Phone,
-  ShieldCheck,
   Heart,
 } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
@@ -26,19 +22,19 @@ export const metadata: Metadata = {
   description:
     "Explore guest amenities at Hotel Vikrant Nainital. Fresh home-cooked in-room dining, 24x7 hot water geysers, 100% power backup, high-speed WiFi, and 300m walking distance to Naini Lake.",
   alternates: {
-    canonical: `${HOTEL_DATA.websiteUrl}/amenities`,
+    canonical: `${HOTEL_DATA.websiteUrl}/amenities/`,
   },
   openGraph: {
     title: "Amenities & In-Room Dining | Hotel Vikrant Nainital",
     description: "In-room dining with home-cooked comfort food, 24x7 hot water geysers, power backup, and fast WiFi on Zoo Road, Nainital.",
-    url: `${HOTEL_DATA.websiteUrl}/amenities`,
+    url: `${HOTEL_DATA.websiteUrl}/amenities/`,
   },
 };
 
 export default function AmenitiesPage() {
   const breadcrumbItems = [
-    { name: "Home", url: HOTEL_DATA.websiteUrl },
-    { name: "Amenities & Dining", url: `${HOTEL_DATA.websiteUrl}/amenities` },
+    { name: "Home", url: `${HOTEL_DATA.websiteUrl}/` },
+    { name: "Amenities & Dining", url: `${HOTEL_DATA.websiteUrl}/amenities/` },
   ];
 
   return (
@@ -65,6 +61,17 @@ export default function AmenitiesPage() {
           <p className="mt-4 text-sm sm:text-base text-[#F4E6D2] max-w-2xl mx-auto">
             From piping-hot home-cooked meals served straight to your room to 24×7 geyser hot showers and high-speed fiber Wi-Fi.
           </p>
+        </div>
+      </section>
+
+      {/* AEO Direct Answer Block for AI Search & Featured Snippets */}
+      <section className="bg-stone-100 border-b border-stone-200/80 py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="aeo-answer-block bg-white p-4 sm:p-5 rounded-2xl border border-stone-200/80 shadow-2xs text-xs sm:text-sm text-stone-700 leading-relaxed">
+            <p>
+              <strong className="text-[#5B3A29]">Direct Answer:</strong> Guest amenities at Hotel Vikrant Nainital include dedicated in-room dining serving freshly prepared pure vegetarian home-cooked meals, independent 24×7 electric hot water geysers in all private bathrooms, 100% power backup (inverter and generator), and high-speed fiber Wi-Fi. The hotel is situated 300 meters (4-minute walk) from Naini Lake on Zoo Road.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -254,13 +261,13 @@ export default function AmenitiesPage() {
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Link
-              href="/rooms"
+              href="/rooms/"
               className="px-6 py-3 rounded-full bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-xs shadow-gold-glow"
             >
               View Deluxe Rooms & Family Suites
             </Link>
             <a
-              href={`tel:${HOTEL_DATA.phone}`}
+              href={HOTEL_DATA.phoneTel}
               className="px-6 py-3 rounded-full bg-[#FAF5ED] hover:bg-[#F4E6D2] text-[#5B3A29] font-bold text-xs border border-[#5B3A29]/20"
             >
               Call Front Desk: {HOTEL_DATA.phoneFormatted}

@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Users, Bed, Mountain, Flame, Wifi, UtensilsCrossed, CalendarCheck, MessageCircle, ChevronLeft, ChevronRight, Check } from "lucide-react";
+import { Users, Bed, CalendarCheck, MessageCircle, ChevronLeft, ChevronRight, Check } from "lucide-react";
 import { Room, HOTEL_DATA } from "@/data/hotelData";
 
 interface RoomCardProps {

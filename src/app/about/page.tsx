@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, ShieldCheck, Heart, Sparkles, Coffee, Clock, Users, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Sparkles, Coffee, Users, ArrowRight, CheckCircle2 } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
 
@@ -11,19 +11,19 @@ export const metadata: Metadata = {
   description:
     "Discover Hotel Vikrant Nainital. Peaceful family-friendly accommodation on Zoo Road, Upper Mall Road, 300m from Naini Lake. Warm Kumaoni hospitality, clean mountain rooms, and fresh in-room dining.",
   alternates: {
-    canonical: `${HOTEL_DATA.websiteUrl}/about`,
+    canonical: `${HOTEL_DATA.websiteUrl}/about/`,
   },
   openGraph: {
     title: "About Hotel Vikrant Nainital | 300m From Naini Lake",
     description: "Learn about Hotel Vikrant, our family stay ethos, peaceful Zoo Road location, and warm Himalayan hospitality in Nainital.",
-    url: `${HOTEL_DATA.websiteUrl}/about`,
+    url: `${HOTEL_DATA.websiteUrl}/about/`,
   },
 };
 
 export default function AboutPage() {
   const breadcrumbItems = [
-    { name: "Home", url: HOTEL_DATA.websiteUrl },
-    { name: "About Us", url: `${HOTEL_DATA.websiteUrl}/about` },
+    { name: "Home", url: `${HOTEL_DATA.websiteUrl}/` },
+    { name: "About Us", url: `${HOTEL_DATA.websiteUrl}/about/` },
   ];
 
   return (
@@ -50,6 +50,17 @@ export default function AboutPage() {
           <p className="mt-4 text-sm sm:text-base text-[#F4E6D2] max-w-2xl mx-auto">
             A quiet sanctuary just 300 meters from Naini Lake, dedicated to comfortable family holidays, scenic mountain views, and authentic home-style care.
           </p>
+        </div>
+      </section>
+
+      {/* AEO Direct Answer Block for AI Search & Featured Snippets */}
+      <section className="bg-stone-100 border-b border-stone-200/80 py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="aeo-answer-block bg-white p-4 sm:p-5 rounded-2xl border border-stone-200/80 shadow-2xs text-xs sm:text-sm text-stone-700 leading-relaxed">
+            <p>
+              <strong className="text-[#5B3A29]">Direct Answer:</strong> Hotel Vikrant is an independent, family-run hotel on Zoo Road, Upper Mall Road, Tallital, Nainital. Situated just 300 meters (4-minute walk) from Naini Lake, the hotel combines peaceful hillside tranquility with immediate walking access to the lakeside promenade, boat jetty, and Tallital bazaar, featuring Deluxe Mountain View Rooms, 4-Bedded Family Suites, and fresh in-room dining.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -133,7 +144,7 @@ export default function AboutPage() {
 
               <div className="pt-4 flex items-center gap-4">
                 <Link
-                  href="/rooms"
+                  href="/rooms/"
                   className="px-6 py-3 rounded-full bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-xs shadow-gold-glow inline-flex items-center gap-2 transition-transform hover:scale-105"
                 >
                   <span>Explore Rooms & Rates</span>
@@ -141,7 +152,7 @@ export default function AboutPage() {
                 </Link>
 
                 <Link
-                  href="/contact"
+                  href="/contact/"
                   className="px-6 py-3 rounded-full bg-[#FAF5ED] hover:bg-[#F4E6D2] text-[#5B3A29] font-bold text-xs border border-[#5B3A29]/20 transition-colors"
                 >
                   <span>Contact Host</span>

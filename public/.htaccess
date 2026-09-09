@@ -1,0 +1,31 @@
+# ----------------------------------------------------------------------
+# Hotel Vikrant Nainital - Hardened Web Server Configuration (.htaccess)
+# Enforces OWASP Top 10 Protections, Dotfile Shields & HTTP Headers
+# ----------------------------------------------------------------------
+
+# 1. Block Access to Hidden Files, Dotfiles, and Git Repositories
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# 2. Block Sensitive Extensions & Configuration Files
+<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|psd|sh|sql|sw[op]|env|json|lock|ts|tsx|md))$">
+    Require all denied
+</FilesMatch>
+
+# 3. Explicit Whitelist for SEO, GEO & Verification Assets
+<FilesMatch "^(site\.webmanifest|llms\.txt|llms-full\.txt|robots\.txt|sitemap\.xml|[a-f0-9]{32}\.txt)$">
+    Require all granted
+</FilesMatch>
+
+# 4. HTTP Security Headers (LiteSpeed / Apache Layer Sync)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), browsing-topics=()"
+    Header set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+    Header set Cross-Origin-Resource-Policy "same-site"
+    Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" env=HTTPS
+</IfModule>

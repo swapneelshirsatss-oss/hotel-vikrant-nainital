@@ -1,43 +1,34 @@
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import {
-  Users,
-  Bed,
-  Mountain,
-  Flame,
-  Wifi,
-  UtensilsCrossed,
   CheckCircle2,
   CalendarCheck,
   MessageCircle,
   Phone,
   ShieldCheck,
-  Zap,
 } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
-import RoomCard from "@/components/RoomCard";
 
 export const metadata: Metadata = {
   title: "Deluxe Rooms & 4-Bed Family Suites | Hotel Vikrant Nainital",
   description:
     "Explore our Deluxe Mountain View Rooms and Spacious 4-Bedded Family Suites in Nainital. Equipped with 24x7 hot water geysers, high-speed WiFi, and fresh in-room dining. Book direct & save 15%.",
   alternates: {
-    canonical: `${HOTEL_DATA.websiteUrl}/rooms`,
+    canonical: `${HOTEL_DATA.websiteUrl}/rooms/`,
   },
   openGraph: {
     title: "Rooms & Suites | Hotel Vikrant Nainital Near Naini Lake",
     description: "Comfortable family suites & deluxe mountain rooms on Zoo Road, Nainital. 300m from Naini Lake. Direct booking discounts.",
-    url: `${HOTEL_DATA.websiteUrl}/rooms`,
+    url: `${HOTEL_DATA.websiteUrl}/rooms/`,
   },
 };
 
 export default function RoomsPage() {
   const breadcrumbItems = [
-    { name: "Home", url: HOTEL_DATA.websiteUrl },
-    { name: "Rooms & Suites", url: `${HOTEL_DATA.websiteUrl}/rooms` },
+    { name: "Home", url: `${HOTEL_DATA.websiteUrl}/` },
+    { name: "Rooms & Suites", url: `${HOTEL_DATA.websiteUrl}/rooms/` },
   ];
 
   return (
@@ -64,6 +55,17 @@ export default function RoomsPage() {
           <p className="mt-4 text-sm sm:text-base text-[#F4E6D2] max-w-2xl mx-auto">
             Clean, sunlit rooms tailored for couples and families. Featuring panoramic mountain views, 24×7 geyser hot water, and attentive in-room food delivery.
           </p>
+        </div>
+      </section>
+
+      {/* AEO Direct Answer Block for AI Search & Featured Snippets */}
+      <section className="bg-stone-100 border-b border-stone-200/80 py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="aeo-answer-block bg-white p-4 sm:p-5 rounded-2xl border border-stone-200/80 shadow-2xs text-xs sm:text-sm text-stone-700 leading-relaxed">
+            <p>
+              <strong className="text-[#5B3A29]">Direct Answer:</strong> Hotel Vikrant Nainital offers two curated room categories on Zoo Road: (1) Deluxe Mountain View Rooms (220 sq. ft., 1 King/Queen bed, ideal for 2 adults + 1 child) and (2) Spacious 4-Bedded Family Suites (380 sq. ft., 2 large double beds, sofa seating, and family dining table for 4 adults + 2 children). All rooms include attached bathrooms with individual 24×7 geyser hot water, 100% power backup, high-speed fiber Wi-Fi, and fresh in-room dining.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -186,7 +188,7 @@ export default function RoomsPage() {
                   </a>
 
                   <a
-                    href={`tel:${HOTEL_DATA.phone}`}
+                    href={HOTEL_DATA.phoneTel}
                     className="py-3.5 px-5 rounded-xl bg-[#FAF5ED] hover:bg-[#F4E6D2] text-[#5B3A29] font-bold text-xs border border-[#5B3A29]/20 flex items-center justify-center gap-2 transition-colors"
                   >
                     <Phone className="w-4 h-4 text-[#2E5D4B]" />

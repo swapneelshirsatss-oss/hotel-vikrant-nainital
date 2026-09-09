@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { MessageCircle, Phone, X, CalendarCheck } from "lucide-react";
+import { MessageCircle, Phone, X } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 
 interface FloatingConciergeProps {
@@ -52,6 +52,15 @@ export default function FloatingConcierge({ onOpenBookingModal }: FloatingConcie
               <MessageCircle className="w-3 h-3" />
               Chat on WhatsApp
             </a>
+            {onOpenBookingModal && (
+              <button
+                type="button"
+                onClick={onOpenBookingModal}
+                className="text-[11px] font-bold text-[#5B3A29] bg-[#FAF5ED] hover:bg-[#F4E6D2] px-3 py-1 rounded-full inline-flex items-center gap-1 border border-[#5B3A29]/20 transition-colors cursor-pointer"
+              >
+                Book Direct
+              </button>
+            )}
           </div>
         </div>
       )}
@@ -60,7 +69,7 @@ export default function FloatingConcierge({ onOpenBookingModal }: FloatingConcie
       <div className="flex items-center gap-2.5">
         {/* Call Button */}
         <a
-          href={`tel:${HOTEL_DATA.phone}`}
+          href={HOTEL_DATA.phoneTel}
           aria-label="Call Front Desk Directly"
           className="w-12 h-12 rounded-full bg-[#5B3A29] hover:bg-[#42281A] text-white flex items-center justify-center shadow-premium transition-transform hover:scale-105 active:scale-95 group relative"
         >

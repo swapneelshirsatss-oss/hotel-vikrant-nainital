@@ -69,30 +69,81 @@ export interface GalleryItem {
   alt: string;
 }
 
+export interface FeederCorridor {
+  city: string;
+  distance: string;
+  driveTime: string;
+  primaryHighway: string;
+  routeBreakdown: string;
+  navUrl: string;
+}
+
+export interface TrainConnection {
+  trainNumber: string;
+  trainName: string;
+  from: string;
+  to: string;
+  departureTime: string;
+  arrivalTime: string;
+  duration: string;
+  frequency: string;
+  stationTaxiTip: string;
+}
+
+export interface TransitHub {
+  hubName: string;
+  code?: string;
+  distance: string;
+  travelTime: string;
+  hubType: "Airport" | "Railway Station" | "Bus Terminal" | "Pilgrimage Hub";
+  description: string;
+  routeTips: string;
+}
+
+export interface ThematicPersona {
+  persona: string;
+  badge: string;
+  title: string;
+  summary: string;
+  recommendedRoom: string;
+  perks: string[];
+  anchorLink: string;
+}
+
 export const HOTEL_DATA = {
   name: "Hotel Vikrant Nainital",
   shortName: "Hotel Vikrant",
+  canonicalEntityName: "Hotel Vikrant Nainital | Family Hotel Near Naini Lake",
   tagline: "Your Comfortable Family Stay Near Naini Lake",
-  subheadline: "Stay just 300 meters from Naini Lake with spacious rooms, mountain views, and warm Himalayan hospitality.",
+  subheadline: "Stay just 300 meters from Naini Lake on Zoo Road with spacious rooms, 4-bed family suites, 24x7 geyser hot water, and warm Himalayan hospitality.",
   phone: "8279561741",
-  phoneFormatted: "+91 8279561741",
+  phoneFormatted: "+91 82795 61741",
+  phoneTel: "tel:+918279561741",
+  phoneRawE164: "+918279561741",
   whatsappNumber: "918279561741",
+  whatsappUrl: "https://wa.me/918279561741",
   email: "vikranthotelnainital@gmail.com",
   address: {
     street: "Zoo Road, Upper Mall Road",
     locality: "Tallital",
+    tehsil: "Tehsil - Nainital",
+    district: "District - Nainital",
     city: "Nainital",
     state: "Uttarakhand",
     postalCode: "263001",
     country: "India",
   },
-  fullAddress: "Zoo Road, Upper Mall Road, Nainital, Uttarakhand 263001, India",
+  fullAddress: "Zoo Road, Upper Mall Road, Tallital, Tehsil - Nainital, District - Nainital, Nainital, Uttarakhand - 263001, India",
   coordinates: {
     latitude: 29.3809047,
     longitude: 79.4657359,
   },
   websiteUrl: "https://vikranthotelnainital.in",
-  googleMapsUrl: "https://maps.google.com/?q=29.3809047,79.4657359",
+  googleMapsCid: "7750087120812246358",
+  googleMapsCidUrl: "https://maps.google.com/maps?cid=7750087120812246358",
+  googlePlaceUrl: "https://maps.google.com/maps?cid=7750087120812246358",
+  googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJnahAovChojkRVgVYetPXjWs",
+  googleMapsUrl: "https://maps.google.com/maps?cid=7750087120812246358",
   googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.4312689531835!2d79.46316097587823!3d29.380909349887713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0a1f0a200a89d%3A0x6b8dd72cb6580556!2sHotel%20Vikrant!5e0!3m2!1sen!2sin!4v1709800000000!5m2!1sen!2sin",
   checkIn: "12:00 PM",
   checkOut: "11:00 AM",
@@ -426,4 +477,229 @@ export const HOTEL_DATA = {
       description: "Comfortable rooms and authentic multi-cuisine dining experience right in the heart of Kainchi Dham.",
     },
   ] as SisterProperty[],
+
+  feederCorridors: [
+    {
+      city: "Delhi NCR",
+      distance: "295 km",
+      driveTime: "6.5–7 hrs",
+      primaryHighway: "NE-3 / NH-9 / NH-109",
+      routeBreakdown: "Delhi → Hapur Bypass → Moradabad Bypass → Rampur → Bilaspur → Rudrapur → Haldwani → Kathgodam → Tallital, Nainital",
+      navUrl: "https://www.google.com/maps/dir/Delhi/Hotel+Vikrant,+Zoo+Road,+Tallital,+Nainital,+Uttarakhand+263001/@29.0069094,77.7788414,8z",
+    },
+    {
+      city: "Noida & Gr. Noida",
+      distance: "290 km",
+      driveTime: "6–6.5 hrs",
+      primaryHighway: "Eastern Peripheral / NH-9 / NH-109",
+      routeBreakdown: "Noida → Dasna → Hapur → Moradabad → Rampur → Rudrapur → Haldwani → Kathgodam → Tallital, Nainital",
+      navUrl: "https://www.google.com/maps/dir/Noida/Hotel+Vikrant,+Zoo+Road,+Tallital,+Nainital,+Uttarakhand+263001/@29.0069094,77.7788414,8z",
+    },
+    {
+      city: "Gurugram / Gurgaon",
+      distance: "330 km",
+      driveTime: "7–7.5 hrs",
+      primaryHighway: "Western Peripheral / NH-9 / NH-109",
+      routeBreakdown: "Gurugram → KMP/NH-48 → Delhi-Meerut Expressway NE-3 → Hapur → Moradabad → Rampur → Haldwani → Nainital",
+      navUrl: "https://www.google.com/maps/dir/Gurugram/Hotel+Vikrant,+Zoo+Road,+Tallital,+Nainital,+Uttarakhand+263001/@29.0069094,77.7788414,8z",
+    },
+    {
+      city: "Ghaziabad",
+      distance: "270 km",
+      driveTime: "5.5–6 hrs",
+      primaryHighway: "NE-3 / NH-9 / NH-109",
+      routeBreakdown: "Ghaziabad → Pilkhuwa → Hapur → Moradabad → Rampur → Bilaspur → Rudrapur → Haldwani → Tallital, Nainital",
+      navUrl: "https://www.google.com/maps/dir/Ghaziabad/Hotel+Vikrant,+Zoo+Road,+Tallital,+Nainital,+Uttarakhand+263001/@29.0069094,77.7788414,8z",
+    },
+    {
+      city: "Faridabad",
+      distance: "315 km",
+      driveTime: "7 hrs",
+      primaryHighway: "FNG / NH-9 / NH-109",
+      routeBreakdown: "Faridabad → Noida-Greater Noida Expressway → Hapur → Moradabad → Rampur → Rudrapur → Haldwani → Nainital",
+      navUrl: "https://www.google.com/maps/dir/Faridabad/Hotel+Vikrant,+Zoo+Road,+Tallital,+Nainital,+Uttarakhand+263001/@29.0069094,77.7788414,8z",
+    },
+    {
+      city: "Moradabad",
+      distance: "150 km",
+      driveTime: "3.5 hrs",
+      primaryHighway: "NH-9 & NH-109",
+      routeBreakdown: "Moradabad → Rampur Bypass → Bilaspur → Rudrapur → Haldwani → Kathgodam → Tallital, Nainital",
+      navUrl: "https://www.google.com/maps/dir/Moradabad/Hotel+Vikrant,+Zoo+Road,+Tallital,+Nainital,+Uttarakhand+263001/@29.0069094,77.7788414,8z",
+    },
+    {
+      city: "Bareilly",
+      distance: "140 km",
+      driveTime: "3.5 hrs",
+      primaryHighway: "NH-30 & NH-109",
+      routeBreakdown: "Bareilly → Baheri → Kichha → Lal Kuan → Haldwani → Kathgodam → Tallital, Nainital",
+      navUrl: "https://www.google.com/maps/dir/Bareilly/Hotel+Vikrant,+Zoo+Road,+Tallital,+Nainital,+Uttarakhand+263001/@29.0069094,77.7788414,8z",
+    },
+    {
+      city: "Lucknow",
+      distance: "385 km",
+      driveTime: "8 hrs",
+      primaryHighway: "NH-30 & NH-109",
+      routeBreakdown: "Lucknow → Sitapur → Shahjahanpur → Bareilly → Baheri → Kichha → Haldwani → Kathgodam → Nainital",
+      navUrl: "https://www.google.com/maps/dir/Lucknow/Hotel+Vikrant,+Zoo+Road,+Tallital,+Nainital,+Uttarakhand+263001/@29.0069094,77.7788414,8z",
+    },
+    {
+      city: "Chandigarh",
+      distance: "445 km",
+      driveTime: "8.5–9 hrs",
+      primaryHighway: "NH-7 / NH-344 / NH-109",
+      routeBreakdown: "Chandigarh → Ambala → Saharanpur → Roorkee → Haridwar → Kashipur → Bazpur → Kaladhungi → Nainital",
+      navUrl: "https://www.google.com/maps/dir/Chandigarh/Hotel+Vikrant,+Zoo+Road,+Tallital,+Nainital,+Uttarakhand+263001/@29.0069094,77.7788414,8z",
+    },
+  ] as FeederCorridor[],
+
+  trainConnections: [
+    {
+      trainNumber: "12040 / 12039",
+      trainName: "New Delhi - Kathgodam Shatabdi Express",
+      from: "New Delhi (NDLS)",
+      to: "Kathgodam (KGM)",
+      departureTime: "06:20 AM",
+      arrivalTime: "11:40 AM",
+      duration: "5h 20m",
+      frequency: "Runs Daily",
+      stationTaxiTip: "Executive & AC Chair car. Connects with pre-paid hill cabs at Kathgodam (~1 hr drive to Tallital, ₹800–1200 private or ₹150 shared).",
+    },
+    {
+      trainNumber: "15013 / 15014",
+      trainName: "Ranikhet Express",
+      from: "Old Delhi (DLI) / Jaisalmer / Jaipur",
+      to: "Kathgodam (KGM)",
+      departureTime: "21:25 PM",
+      arrivalTime: "05:05 AM",
+      duration: "7h 40m",
+      frequency: "Runs Daily",
+      stationTaxiTip: "Overnight sleeper & AC train. Arrives early morning; early check-in assistance provided upon prior WhatsApp request.",
+    },
+    {
+      trainNumber: "15035 / 15036",
+      trainName: "Uttaranchal Sampark Kranti Express",
+      from: "Old Delhi (DLI)",
+      to: "Kathgodam (KGM)",
+      departureTime: "16:00 PM",
+      arrivalTime: "22:45 PM",
+      duration: "6h 45m",
+      frequency: "Runs Daily",
+      stationTaxiTip: "Convenient evening express. 24x7 front desk at Hotel Vikrant welcomes late arrivals with warm tea.",
+    },
+    {
+      trainNumber: "13019 / 13020",
+      trainName: "Bagh Express",
+      from: "Howrah (HWH) / Lucknow / Gorakhpur",
+      to: "Kathgodam (KGM)",
+      departureTime: "00:30 AM (Lucknow)",
+      arrivalTime: "09:25 AM",
+      duration: "8h 55m",
+      frequency: "Runs Daily",
+      stationTaxiTip: "Connects Eastern UP, Bihar, and West Bengal travelers smoothly into Kumaon.",
+    },
+  ] as TrainConnection[],
+
+  transitHubs: [
+    {
+      hubName: "Kathgodam Railway Station",
+      code: "KGM",
+      distance: "34 km",
+      travelTime: "1 Hour Drive",
+      hubType: "Railway Station",
+      description: "Primary rail gateway to Nainital & Kumaon hills. 24x7 pre-paid and shared mountain cabs run to Tallital drop stand.",
+      routeTips: "Cabs drop at Tallital taxi stand (400m from hotel). A gentle 4-min walk up Zoo Road brings you to our front desk.",
+    },
+    {
+      hubName: "Tallital Bus Stand (Nainital)",
+      code: "UTC",
+      distance: "400 Meters",
+      travelTime: "4–5 Min Walk",
+      hubType: "Bus Terminal",
+      description: "Direct Volvo, AC, and Deluxe Uttarakhand Transport (UTC) state buses from ISBT Anand Vihar, Delhi and Dehradun.",
+      routeTips: "Walk towards Zoo Road off Upper Mall Road. No taxi needed—we are just an easy stroll up the gentle road.",
+    },
+    {
+      hubName: "Tallital Rickshaw Stand",
+      distance: "300 Meters",
+      travelTime: "3–4 Min Walk",
+      hubType: "Bus Terminal",
+      description: "Traditional lakeside rickshaws provide scenic transit connecting Tallital to Mallital along Mall Road.",
+      routeTips: "Ideal for leisurely evening promenades along Naini Lake.",
+    },
+    {
+      hubName: "Pantnagar Airport",
+      code: "PGH",
+      distance: "70 km",
+      travelTime: "2 Hours Drive",
+      hubType: "Airport",
+      description: "Nearest domestic commercial airport with daily direct flights from Delhi (Alliance Air / IndiGo).",
+      routeTips: "Mountain taxis available outside terminal via Rudrapur, Haldwani & Kathgodam to Nainital.",
+    },
+    {
+      hubName: "Bareilly Airport",
+      code: "BEK",
+      distance: "140 km",
+      travelTime: "3.5 Hours Drive",
+      hubType: "Airport",
+      description: "Regional airport connecting Mumbai, Bengaluru, and Lucknow via direct commercial flights.",
+      routeTips: "Direct private cabs reach Nainital in 3.5 hours via NH-30 and NH-109.",
+    },
+    {
+      hubName: "Indira Gandhi International Airport, Delhi",
+      code: "DEL",
+      distance: "310 km",
+      travelTime: "6.5–7 Hours",
+      hubType: "Airport",
+      description: "Main international flight hub. Travelers can connect via Delhi-Kathgodam Shatabdi train or private chauffeur cab.",
+      routeTips: "Expressway route via Delhi-Meerut Expressway (NE-3) and NH-9.",
+    },
+    {
+      hubName: "Kainchi Dham (Neem Karoli Baba Ashram)",
+      distance: "18 km",
+      travelTime: "40–45 Mins",
+      hubType: "Pilgrimage Hub",
+      description: "World-renowned sacred ashram of Neem Karoli Baba Maharaj. Hotel Vikrant serves as a peaceful lakeside basecamp.",
+      routeTips: "Scenic drive along the Bhowali-Almora highway. Local cabs readily arranged at our front desk.",
+    },
+  ] as TransitHub[],
+
+  thematicPersonas: [
+    {
+      persona: "Metro Families",
+      badge: "Spacious Family Stays",
+      title: "Spacious 4-Bedded Suites for Parents & Kids",
+      summary: "Comfortable family suites with two king beds under one roof, 24x7 geyser hot water, pure home-cooked in-room dining, and easy 4-minute walk to lake boating.",
+      recommendedRoom: "4-Bedded Family Suite",
+      perks: ["Zero room splitting", "Piping hot home meals in-room", "Safe peaceful Zoo Road setting", "300m walk to lake"],
+      anchorLink: "/rooms#family-suite",
+    },
+    {
+      persona: "Couples & Serenity Seekers",
+      badge: "Scenic Mountain Escape",
+      title: "Deluxe Mountain View Rooms Away From Noise",
+      summary: "Wake up to misty pine valley views from your window. Enjoy warm morning ginger chai and quiet evenings away from the Mall Road horns and bustle.",
+      recommendedRoom: "Deluxe Mountain View Room",
+      perks: ["Forest & valley vistas", "Quiet sanctuary 300m off Mall Road", "Fast fiber WiFi", "Romantic lake strolls"],
+      anchorLink: "/rooms#deluxe-room",
+    },
+    {
+      persona: "Pilgrims & Spiritual Travelers",
+      badge: "Spiritual Basecamp",
+      title: "Peaceful Basecamp for Kainchi Dham & Naina Devi",
+      summary: "Located just 18 km from Neem Karoli Baba Ashram (Kainchi Dham) and 1.2 km from Maa Naina Devi Temple. Enjoy peaceful rest and pure vegetarian dining.",
+      recommendedRoom: "Deluxe or Family Suite",
+      perks: ["18 km to Kainchi Dham", "1.2 km to Naina Devi Temple", "Pure vegetarian satvik dining on request", "Taxi assistance to ashram"],
+      anchorLink: "/attractions#kainchi-dham",
+    },
+    {
+      persona: "Workationers & Remote Nomads",
+      badge: "High-Speed Workation",
+      title: "Himalayan Workstation with Fiber WiFi & Power Backup",
+      summary: "Stay productive with high-speed fiber internet, 100% inverter and generator power backup, fresh tea on demand, and scenic mountain views during Zoom calls.",
+      recommendedRoom: "Deluxe Mountain View Room",
+      perks: ["High-speed fiber WiFi", "100% power backup", "Ergonomic work desk setup", "Extended stay discounts"],
+      anchorLink: "/amenities#wifi",
+    },
+  ] as ThematicPersona[],
 };

@@ -1,8 +1,16 @@
 import React from "react";
-import { Star, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Star, ShieldCheck, CheckCircle2, MessageSquarePlus, ExternalLink, Sparkles } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 
 export default function GoogleReviews() {
+  const keywordPrompts = [
+    "peaceful Zoo Road near Naini Lake",
+    "spacious 4-bed family suite",
+    "instant 24x7 geyser hot water",
+    "fresh home-cooked in-room dining",
+    "friendly host & local taxi help",
+  ];
+
   return (
     <section className="py-16 sm:py-24 bg-white border-t border-b border-stone-200/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,11 +22,11 @@ export default function GoogleReviews() {
                 <Star key={i} className="w-3.5 h-3.5 fill-current" />
               ))}
             </span>
-            <span>4.8 Out of 5.0 Rating • Verified Direct Guests</span>
+            <span>4.8 Out of 5.0 Rating • Verified Direct Guests ({HOTEL_DATA.totalReviews}+ Reviews)</span>
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#5B3A29]">
-            Loved by Families & Mountain Travelers
+            Loved by Families &amp; Mountain Travelers
           </h2>
           <p className="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
             Real experiences from travelers who chose Hotel Vikrant for our peaceful Zoo Road location, warm home-cooked meals, and quick 4-minute walk to Naini Lake.
@@ -82,7 +90,7 @@ export default function GoogleReviews() {
           <div className="hidden sm:block text-stone-300">|</div>
           <div>
             <span className="font-serif text-xl font-bold text-[#5B3A29] block">4.8 / 5.0</span>
-            <span className="text-xs text-stone-600">Cleanliness & Hygiene</span>
+            <span className="text-xs text-stone-600">Cleanliness &amp; Hygiene</span>
           </div>
           <div className="hidden sm:block text-stone-300">|</div>
           <div>
@@ -92,7 +100,56 @@ export default function GoogleReviews() {
           <div className="hidden sm:block text-stone-300">|</div>
           <div>
             <span className="font-serif text-xl font-bold text-[#5B3A29] block">4.9 / 5.0</span>
-            <span className="text-xs text-stone-600">In-Room Food & Hospitality</span>
+            <span className="text-xs text-stone-600">In-Room Food &amp; Hospitality</span>
+          </div>
+        </div>
+
+        {/* Google Review Velocity Trigger Card */}
+        <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#FAF5ED] via-white to-[#FAF5ED] border border-[#D4A437]/40 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-2 text-center md:text-left">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D4A437]/15 text-[11px] font-bold text-[#5B3A29]">
+              <Sparkles className="w-3.5 h-3.5 text-[#D4A437]" />
+              <span>Share Your Experience</span>
+            </div>
+            <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#5B3A29]">
+              Stayed With Us at Hotel Vikrant?
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 max-w-xl">
+              Your feedback helps fellow travelers find quiet, honest family accommodation in Nainital. Mention your favorite amenities:
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-1 justify-center md:justify-start">
+              {keywordPrompts.map((prompt) => (
+                <span
+                  key={prompt}
+                  className="px-2.5 py-1 rounded-full bg-white border border-stone-200 text-[11px] text-stone-700 font-medium"
+                >
+                  &ldquo;{prompt}&rdquo;
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="shrink-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+            <a
+              href={HOTEL_DATA.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3.5 rounded-2xl bg-[#5B3A29] hover:bg-[#42281A] text-white font-bold text-xs shadow-premium flex items-center justify-center gap-2 transition-all hover:scale-105"
+            >
+              <MessageSquarePlus className="w-4 h-4 text-[#D4A437]" />
+              <span>Write a Google Review</span>
+              <ExternalLink className="w-3 h-3 text-white/70" />
+            </a>
+
+            <a
+              href={HOTEL_DATA.googleMapsCidUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3.5 rounded-2xl bg-white hover:bg-stone-50 text-[#5B3A29] font-bold text-xs border border-stone-200 flex items-center justify-center gap-1.5 transition-colors"
+            >
+              <span>View Google Maps Place</span>
+              <ExternalLink className="w-3 h-3 text-[#2E5D4B]" />
+            </a>
           </div>
         </div>
       </div>

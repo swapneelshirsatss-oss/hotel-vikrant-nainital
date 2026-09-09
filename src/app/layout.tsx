@@ -57,13 +57,22 @@ export const metadata: Metadata = {
     email: true,
   },
   alternates: {
-    canonical: HOTEL_DATA.websiteUrl,
+    canonical: `${HOTEL_DATA.websiteUrl}/`,
+    types: {
+      "text/markdown": [
+        {
+          url: "/llms.txt",
+          title: "Hotel Vikrant Nainital LLM Knowledge Base",
+        },
+      ],
+    },
   },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Hotel Vikrant Nainital | Family Hotel Near Naini Lake & Mall Road",
     description:
       "Stay 300m from Naini Lake with mountain views, spacious 4-bed family suites, 24x7 hot water, high-speed WiFi, and fresh in-room dining. Direct bookings save 15%.",
-    url: HOTEL_DATA.websiteUrl,
+    url: `${HOTEL_DATA.websiteUrl}/`,
     siteName: "Hotel Vikrant Nainital",
     locale: "en_IN",
     type: "website",
@@ -109,7 +118,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${poppins.variable} scroll-smooth`}>
       <head>
-        <JsonLd type="home" />
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href="/llms.txt"
+          title="Hotel Vikrant Nainital LLM Knowledge Base"
+        />
+        <JsonLd type="layout" />
       </head>
       <body className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#1C1917] font-sans antialiased">
         <LayoutWrapper>{children}</LayoutWrapper>

@@ -18,12 +18,15 @@ export default function BookingModal({ isOpen, onClose, defaultRoomId }: Booking
   const [childrenCount, setChildrenCount] = useState("0");
   const [guestName, setGuestName] = useState("");
   const [guestPhone, setGuestPhone] = useState("");
+  const [honeypot, setHoneypot] = useState("");
 
-  useEffect(() => {
+  const [prevDefaultRoomId, setPrevDefaultRoomId] = useState(defaultRoomId);
+  if (defaultRoomId !== prevDefaultRoomId) {
+    setPrevDefaultRoomId(defaultRoomId);
     if (defaultRoomId) {
       setSelectedRoom(defaultRoomId);
     }
-  }, [defaultRoomId]);
+  }
 
   // Handle ESC key
   useEffect(() => {
@@ -46,19 +49,31 @@ export default function BookingModal({ isOpen, onClose, defaultRoomId }: Booking
 
   const handleWhatsAppBooking = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // OWASP Anti-Spam: Bot caught in honeypot
+    if (honeypot.trim() !== "") {
+      onClose();
+      return;
+    }
+
+    const cleanName = guestName.trim().slice(0, 100);
+    const cleanPhone = guestPhone.trim().slice(0, 25);
+    const cleanCheckIn = checkIn.trim().slice(0, 30);
+    const cleanCheckOut = checkOut.trim().slice(0, 30);
+
     const message = `*Direct Booking Inquiry - Hotel Vikrant Nainital*
 ----------------------------------------
 *Room:* ${roomObj.name}
-*Check-in:* ${checkIn || "Flexible"}
-*Check-out:* ${checkOut || "Flexible"}
+*Check-in:* ${cleanCheckIn || "Flexible"}
+*Check-out:* ${cleanCheckOut || "Flexible"}
 *Guests:* ${adults} Adults, ${childrenCount} Children
-*Guest Name:* ${guestName || "Guest"}
-*Contact:* ${guestPhone || "Direct WhatsApp"}
+*Guest Name:* ${cleanName || "Guest"}
+*Contact:* ${cleanPhone || "Direct WhatsApp"}
 ----------------------------------------
 *Direct Rate Inquiry:* Looking for direct booking rates and confirmation.`;
 
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encoded}`, "_blank", "noopener,noreferrer");
     onClose();
   };
 
@@ -177,6 +192,18 @@ export default function BookingModal({ isOpen, onClose, defaultRoomId }: Booking
             </div>
           </div>
 
+          {/* Anti-spam honeypot (hidden from real users) */}
+          <div className="hidden" aria-hidden="true">
+            <input
+              type="text"
+              name="booking_modal_hp"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
+
           {/* Guest Contact Details */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
@@ -185,6 +212,7 @@ export default function BookingModal({ isOpen, onClose, defaultRoomId }: Booking
               </label>
               <input
                 type="text"
+                maxLength={100}
                 placeholder="e.g. Rahul Sharma"
                 value={guestName}
                 onChange={(e) => setGuestName(e.target.value)}
@@ -197,6 +225,7 @@ export default function BookingModal({ isOpen, onClose, defaultRoomId }: Booking
               </label>
               <input
                 type="tel"
+                maxLength={25}
                 placeholder="e.g. 9876543210"
                 value={guestPhone}
                 onChange={(e) => setGuestPhone(e.target.value)}
@@ -230,7 +259,7 @@ export default function BookingModal({ isOpen, onClose, defaultRoomId }: Booking
             </button>
 
             <a
-              href={`tel:${HOTEL_DATA.phone}`}
+              href={HOTEL_DATA.phoneTel}
               className="flex items-center justify-center gap-2 bg-[#FAF5ED] hover:bg-[#F4E6D2] text-[#5B3A29] border border-[#5B3A29]/20 py-3 px-4 rounded-xl font-bold text-sm transition-colors"
             >
               <Phone className="w-4 h-4 text-[#2E5D4B]" />

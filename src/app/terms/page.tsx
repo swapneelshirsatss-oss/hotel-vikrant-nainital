@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   title: "Terms & Reservation Policy | Hotel Vikrant Nainital",
   description: "Reservation terms, check-in policies, and cancellation guidelines for Hotel Vikrant Nainital.",
   alternates: {
-    canonical: `${HOTEL_DATA.websiteUrl}/terms`,
+    canonical: `${HOTEL_DATA.websiteUrl}/terms/`,
   },
 };
 
 export default function TermsPage() {
   const breadcrumbItems = [
-    { name: "Home", url: HOTEL_DATA.websiteUrl },
-    { name: "Terms & Conditions", url: `${HOTEL_DATA.websiteUrl}/terms` },
+    { name: "Home", url: `${HOTEL_DATA.websiteUrl}/` },
+    { name: "Terms & Conditions", url: `${HOTEL_DATA.websiteUrl}/terms/` },
   ];
 
   return (

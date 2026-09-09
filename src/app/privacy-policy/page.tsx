@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
 
@@ -8,14 +7,14 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Hotel Vikrant Nainital",
   description: "Privacy policy for Hotel Vikrant Nainital. Learn how we handle guest information and direct reservation data.",
   alternates: {
-    canonical: `${HOTEL_DATA.websiteUrl}/privacy-policy`,
+    canonical: `${HOTEL_DATA.websiteUrl}/privacy-policy/`,
   },
 };
 
 export default function PrivacyPolicyPage() {
   const breadcrumbItems = [
-    { name: "Home", url: HOTEL_DATA.websiteUrl },
-    { name: "Privacy Policy", url: `${HOTEL_DATA.websiteUrl}/privacy-policy` },
+    { name: "Home", url: `${HOTEL_DATA.websiteUrl}/` },
+    { name: "Privacy Policy", url: `${HOTEL_DATA.websiteUrl}/privacy-policy/` },
   ];
 
   return (

@@ -1,0 +1,17 @@
+{
+  "name": "Hotel Vikrant Nainital",
+  "short_name": "Hotel Vikrant",
+  "description": "Comfortable family hotel on Zoo Road, Nainital. 300m from Naini Lake. Deluxe rooms & 4-bed family suites, 24x7 hot water geysers, in-room dining.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#5B3A29",
+  "icons": [
+    {
+      "src": "/images/logo/hotel-vikrant-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
