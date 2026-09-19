@@ -71,9 +71,7 @@ export default function HomePage() {
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
             <a
-              href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
-                "Hi Hotel Vikrant! I am planning a stay in Nainital and would like to check room rates and availability."
-              )}`}
+              href={HOTEL_DATA.bookingEngineUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-7 py-4 rounded-full bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-sm shadow-gold-glow flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer"
@@ -83,8 +81,20 @@ export default function HomePage() {
             </a>
 
             <a
+              href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
+                "Hi Hotel Vikrant! I am planning a stay in Nainital and would like to check room rates and availability."
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-6 py-4 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-sm shadow-md flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <MessageCircle className="w-4 h-4 fill-current" />
+              <span>WhatsApp Rates</span>
+            </a>
+
+            <a
               href={HOTEL_DATA.phoneTel}
-              className="w-full sm:w-auto px-7 py-4 rounded-full bg-white/15 hover:bg-white/25 text-white border border-white/30 backdrop-blur-md font-bold text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto px-6 py-4 rounded-full bg-white/15 hover:bg-white/25 text-white border border-white/30 backdrop-blur-md font-bold text-sm flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95"
             >
               <Phone className="w-4 h-4 text-[#D4A437]" />
               <span>Call Host: {HOTEL_DATA.phoneFormatted}</span>
@@ -337,17 +347,29 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <a
-                href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
-                  "Hi! I would like to check current seasonal rates for Hotel Vikrant and claim the direct booking discount."
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3 px-4 rounded-xl bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-xs shadow-gold-glow flex items-center justify-center gap-2 transition-all cursor-pointer"
-              >
-                <MessageCircle className="w-4 h-4 fill-current" />
-                <span>Check Live Rates on WhatsApp</span>
-              </a>
+              <div className="flex flex-col sm:flex-row gap-2.5">
+                <a
+                  href={HOTEL_DATA.bookingEngineUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-3 px-4 rounded-xl bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-xs shadow-gold-glow flex items-center justify-center gap-2 transition-all cursor-pointer"
+                >
+                  <CalendarCheck className="w-4 h-4" />
+                  <span>Book Online (15% Off)</span>
+                </a>
+
+                <a
+                  href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
+                    "Hi! I would like to check current seasonal rates for Hotel Vikrant and claim the direct booking discount."
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs shadow-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
+                >
+                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <span>WhatsApp Rates</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -580,6 +602,15 @@ export default function HomePage() {
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <a
+              href={HOTEL_DATA.bookingEngineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-xs shadow-gold-glow flex items-center justify-center gap-2 transition-all hover:scale-105 cursor-pointer"
+            >
+              <CalendarCheck className="w-4 h-4" />
+              <span>Book Online Instantly (Save 15%)</span>
+            </a>
+            <a
               href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
                 "Hi Hotel Vikrant! I would like to check room availability for my upcoming trip to Nainital."
               )}`}
@@ -588,7 +619,7 @@ export default function HomePage() {
               className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs shadow-whatsapp-glow flex items-center justify-center gap-2 transition-all hover:scale-105 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
-              <span>Chat with Host on WhatsApp</span>
+              <span>Chat on WhatsApp</span>
             </a>
             <a
               href={HOTEL_DATA.phoneTel}

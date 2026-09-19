@@ -13,6 +13,7 @@ import {
   MessageCircle,
   Phone,
   ShieldCheck,
+  CalendarCheck,
 } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
@@ -206,7 +207,17 @@ export default function GuidesHubPage() {
             Avoid middleman OTA commissions. Book directly on WhatsApp to enjoy a 15% discount, priority mountain-view room allocation, and free early check-in assistance.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
+            <a
+              href={HOTEL_DATA.bookingEngineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3.5 rounded-full bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-xs shadow-gold-glow flex items-center gap-2 transition-all hover:scale-105 cursor-pointer"
+            >
+              <CalendarCheck className="w-4 h-4" />
+              <span>Book Direct & Save 15%</span>
+            </a>
+
             <a
               href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
                 "Hi Hotel Vikrant! I was reading your Nainital travel guides and would like to check room rates and availability."
@@ -216,7 +227,7 @@ export default function GuidesHubPage() {
               className="px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs shadow-whatsapp-glow flex items-center gap-2 transition-all hover:scale-105 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
-              <span>WhatsApp Concierge (15% Off)</span>
+              <span>WhatsApp Concierge</span>
             </a>
 
             <a
@@ -224,14 +235,14 @@ export default function GuidesHubPage() {
               className="px-6 py-3.5 rounded-full bg-[#5B3A29] hover:bg-[#42281A] text-white font-bold text-xs shadow-premium flex items-center gap-2 transition-all hover:scale-105"
             >
               <Phone className="w-4 h-4 text-[#D4A437]" />
-              <span>Call Front Desk: {HOTEL_DATA.phoneFormatted}</span>
+              <span>Call Host: {HOTEL_DATA.phoneFormatted}</span>
             </a>
 
             <Link
               href="/rooms/"
               className="px-6 py-3.5 rounded-full bg-white hover:bg-stone-50 text-[#5B3A29] font-bold text-xs border border-[#5B3A29]/20 transition-colors"
             >
-              <span>View Deluxe Rooms &amp; Suites</span>
+              <span>View Rooms &amp; Suites</span>
             </Link>
           </div>
         </div>

@@ -8,6 +8,7 @@ import {
   Clock,
   Navigation,
   ExternalLink,
+  CalendarCheck,
 } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
@@ -145,6 +146,25 @@ export default function ContactPage() {
                       {HOTEL_DATA.phoneFormatted}
                     </a>
                     <span className="text-[11px] text-stone-500">Universal E.164 front desk connection</span>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white border border-[#5B3A29]/10 shadow-xs flex items-start gap-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-[#FAF5ED] flex items-center justify-center shrink-0 text-[#5B3A29]">
+                    <CalendarCheck className="w-5 h-5 text-[#D4A437]" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xs sm:text-sm text-[#5B3A29]">Online Booking Engine</h3>
+                    <a
+                      href={HOTEL_DATA.bookingEngineUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs sm:text-sm font-bold text-[#5B3A29] hover:text-[#D4A437] hover:underline flex items-center gap-1 mt-0.5"
+                    >
+                      <span>booking.vikranthotelnainital.in</span>
+                      <ExternalLink className="w-3 h-3 text-[#D4A437]" />
+                    </a>
+                    <span className="text-[11px] text-stone-500">Instant reservation & guaranteed 10%–15% direct discount</span>
                   </div>
                 </div>
 

@@ -76,17 +76,28 @@ export default function RoomsPage() {
             <ShieldCheck className="w-4 h-4 text-[#2E5D4B]" />
             <span>Why Book Direct? Save 10%–15% vs OTAs • Best Mountain View Allocation • Free Early Check-in Priority</span>
           </div>
-          <a
-            href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
-              "Hi Hotel Vikrant! I am checking room rates for an upcoming visit to Nainital."
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold text-[#2E5D4B] hover:underline flex items-center gap-1"
-          >
-            <MessageCircle className="w-3.5 h-3.5 text-[#25D366] fill-current" />
-            Check Live WhatsApp Rates
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href={HOTEL_DATA.bookingEngineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-[#D4A437] hover:underline flex items-center gap-1 bg-[#5B3A29] px-3 py-1 rounded-full text-[11px]"
+            >
+              <CalendarCheck className="w-3.5 h-3.5 text-[#D4A437]" />
+              Book Online Direct
+            </a>
+            <a
+              href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
+                "Hi Hotel Vikrant! I am checking room rates for an upcoming visit to Nainital."
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-[#2E5D4B] hover:underline flex items-center gap-1"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-[#25D366] fill-current" />
+              WhatsApp Rates
+            </a>
+          </div>
         </div>
       </div>
 
@@ -176,15 +187,25 @@ export default function RoomsPage() {
                 {/* Direct Booking Actions */}
                 <div className="pt-4 border-t border-stone-100 flex flex-col sm:flex-row gap-3">
                   <a
-                    href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
-                      `Hi Hotel Vikrant! I would like to book the *${room.name}* for an upcoming stay. Please share availability and direct booking rates.`
-                    )}`}
+                    href={HOTEL_DATA.bookingEngineUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 py-3.5 px-5 rounded-xl bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-xs shadow-gold-glow flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer"
                   >
                     <CalendarCheck className="w-4 h-4" />
-                    <span>Book on WhatsApp (15% Off)</span>
+                    <span>Book Online Instantly (Save 15%)</span>
+                  </a>
+
+                  <a
+                    href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
+                      `Hi Hotel Vikrant! I would like to book the *${room.name}* for an upcoming stay. Please share availability and direct booking rates.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-3.5 px-5 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#128C7E] font-bold text-xs border border-[#25D366]/30 flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                  >
+                    <MessageCircle className="w-4 h-4 text-[#25D366] fill-current" />
+                    <span>WhatsApp</span>
                   </a>
 
                   <a

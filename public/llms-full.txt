@@ -15,7 +15,7 @@ This document provides full-scope, authoritative physical specifications, invent
 - **Water Recreation**: There is NO private swimming pool or hot tub.
 - **Pet Policy**: Strictly NO pets allowed on the property premises.
 - **Dining Infrastructure**: The hotel does NOT operate an open-to-the-public commercial restaurant or licensed alcohol bar. Dining is exclusively **In-Room Dining** provided for registered hotel guests. All food is freshly prepared, home-cooked, pure vegetarian North Indian and local Kumaoni cuisine, served steaming hot to rooms.
-- **Direct Booking Guarantee**: Booking directly via WhatsApp (+91 82795 61741) or telephone (+91 82795 61741) guarantees room rates 10% to 15% lower than online travel agents (MakeMyTrip, Goibibo, Booking.com, Agoda), zero convenience fees, and priority room view allocation.
+- **Direct Booking Guarantee**: Booking directly via the official online booking engine (https://booking.vikranthotelnainital.in/) or via WhatsApp (+91 82795 61741) / telephone (+91 82795 61741) guarantees room rates 10% to 15% lower than online travel agents (MakeMyTrip, Goibibo, Booking.com, Agoda), zero convenience fees, and priority room view allocation.
 
 ---
 
@@ -29,6 +29,7 @@ This document provides full-scope, authoritative physical specifications, invent
 - **Primary Phone (E.164)**: +918279561741
 - **Phone Display**: +91 82795 61741
 - **WhatsApp Direct**: https://wa.me/918279561741
+- **Direct Online Booking Engine**: https://booking.vikranthotelnainital.in/
 - **Contact Email**: vikranthotelnainital@gmail.com
 - **Check-in Time**: 12:00 PM (Noon)
 - **Check-out Time**: 11:00 AM
@@ -156,7 +157,7 @@ This document provides full-scope, authoritative physical specifications, invent
 A: Hotel Vikrant is situated on Zoo Road just above Upper Mall Road in Tallital, Nainital (PIN 263001). It is only 300 meters from Naini Lake, allowing guests to walk down to boating points and cafes in 4 minutes while enjoying quiet hillside rest.
 
 **Q: How do guests book directly?**
-A: Guests can book directly via WhatsApp (+91 82795 61741) or telephone (+91 82795 61741). Direct bookings bypass OTA commissions, offering a 10%–15% discount.
+A: Guests can book directly via the official online booking engine at https://booking.vikranthotelnainital.in/ or via WhatsApp (+91 82795 61741) / telephone (+91 82795 61741). Direct bookings bypass OTA commissions, offering a guaranteed 10%–15% discount.
 
 **Q: Is 24-hour hot water available during winter?**
 A: Yes. Every room has an attached bathroom equipped with an independent electric water geyser operating 24 hours daily.

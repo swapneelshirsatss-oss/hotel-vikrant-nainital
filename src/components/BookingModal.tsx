@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { X, Calendar, Users, Home, Phone, MessageCircle, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { X, Calendar, Users, Home, Phone, MessageCircle, ShieldCheck, CheckCircle2, CalendarCheck, ExternalLink } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 
 interface BookingModalProps {
@@ -249,22 +249,35 @@ export default function BookingModal({ isOpen, onClose, defaultRoomId }: Booking
           </div>
 
           {/* Action CTAs */}
-          <div className="pt-2 flex flex-col sm:flex-row gap-2.5">
-            <button
-              type="submit"
-              className="flex-1 bg-[#25D366] hover:bg-[#20ba59] text-white py-3 px-4 rounded-xl font-bold text-sm shadow-md flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
-            >
-              <MessageCircle className="w-4 h-4 fill-current" />
-              <span>Send Inquiry on WhatsApp</span>
-            </button>
-
+          <div className="pt-2 space-y-2.5">
             <a
-              href={HOTEL_DATA.phoneTel}
-              className="flex items-center justify-center gap-2 bg-[#FAF5ED] hover:bg-[#F4E6D2] text-[#5B3A29] border border-[#5B3A29]/20 py-3 px-4 rounded-xl font-bold text-sm transition-colors"
+              href={HOTEL_DATA.bookingEngineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] py-3.5 px-4 rounded-xl font-extrabold text-sm shadow-gold-glow flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
             >
-              <Phone className="w-4 h-4 text-[#2E5D4B]" />
-              <span>Instant Call</span>
+              <CalendarCheck className="w-4 h-4" />
+              <span>Book Online Instantly (Save 15%)</span>
+              <ExternalLink className="w-3.5 h-3.5 opacity-75 ml-0.5" />
             </a>
+
+            <div className="flex flex-col sm:flex-row gap-2.5">
+              <button
+                type="submit"
+                className="flex-1 bg-[#25D366] hover:bg-[#20ba59] text-white py-3 px-4 rounded-xl font-bold text-xs sm:text-sm shadow-md flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+              >
+                <MessageCircle className="w-4 h-4 fill-current" />
+                <span>Send WhatsApp Inquiry</span>
+              </button>
+
+              <a
+                href={HOTEL_DATA.phoneTel}
+                className="flex items-center justify-center gap-2 bg-[#FAF5ED] hover:bg-[#F4E6D2] text-[#5B3A29] border border-[#5B3A29]/20 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm transition-colors"
+              >
+                <Phone className="w-4 h-4 text-[#2E5D4B]" />
+                <span>Instant Call</span>
+              </a>
+            </div>
           </div>
         </form>
       </div>

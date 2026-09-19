@@ -171,6 +171,7 @@ export const HOTEL_DATA = {
     longitude: 79.4657359,
   },
   websiteUrl: "https://vikranthotelnainital.in",
+  bookingEngineUrl: "https://booking.vikranthotelnainital.in/",
   googleMapsCid: "7750087120812246358",
   googleMapsCidUrl: "https://maps.google.com/maps?cid=7750087120812246358",
   googlePlaceUrl: "https://maps.google.com/maps?cid=7750087120812246358",
@@ -457,8 +458,8 @@ export const HOTEL_DATA = {
     },
     {
       category: "Booking",
-      question: "Why should I book directly on WhatsApp or Call instead of OTAs?",
-      answer: "Booking directly with Hotel Vikrant guarantees you the best room rates with zero middleman platform commissions (saving 10% to 15%). You also receive priority room allocation for upper-floor mountain views, early check-in assistance, and personalized guidance from your host.",
+      question: "Why should I book directly via the Online Booking Engine or WhatsApp instead of OTAs?",
+      answer: "Booking directly with Hotel Vikrant through our online booking engine (https://booking.vikranthotelnainital.in/) or WhatsApp (+91 82795 61741) guarantees you the best room rates with zero middleman platform commissions (saving 10% to 15%). You also receive priority room allocation for upper-floor mountain views, early check-in assistance, and personalized guidance from your host.",
     },
     {
       category: "Amenities",

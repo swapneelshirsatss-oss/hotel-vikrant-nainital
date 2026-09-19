@@ -13,8 +13,8 @@
     Require all denied
 </FilesMatch>
 
-# 3. Explicit Whitelist for SEO, GEO & Verification Assets
-<FilesMatch "^(site\.webmanifest|llms\.txt|llms-full\.txt|robots\.txt|sitemap\.xml|[a-f0-9]{32}\.txt)$">
+# 3. Explicit Whitelist for SEO, GEO, AEO & Verification Assets
+<FilesMatch "^(site\.webmanifest|llms\.txt|llms-full\.txt|Hotel\.txt|hotelData\.json|robots\.txt|sitemap\.xml|[a-f0-9]{32}\.txt)$">
     Require all granted
 </FilesMatch>
 

@@ -1,0 +1,118 @@
+================================================================================
+HOTEL VIKRANT NAINITAL — OFFICIAL HOTEL DATA SPECIFICATION
+Ground-Truth Knowledge Base, Entity Information, Inventory & Operations Hub
+================================================================================
+Last Updated: 2026-09-19
+Canonical Web Domain: https://vikranthotelnainital.in
+Online Booking Engine: https://booking.vikranthotelnainital.in/
+Primary Location: Zoo Road, Upper Mall Road, Tallital, Nainital (300m to Naini Lake)
+
+--------------------------------------------------------------------------------
+1. CANONICAL ENTITY & BRAND IDENTITY (NAP)
+--------------------------------------------------------------------------------
+Official Name:          Hotel Vikrant Nainital
+Legal Entity Name:      Hotel Vikrant Nainital | Family Hotel Near Naini Lake
+Short Brand Name:       Hotel Vikrant
+Tagline:                Your Comfortable Family Stay Near Naini Lake
+Category:               Boutique Family Hillside Hotel & Lake Stay
+Primary Phone (E.164):  +918279561741
+Formatted Phone:        +91 82795 61741
+Phone Dial String:      tel:+918279561741
+WhatsApp Direct:        https://wa.me/918279561741
+Direct Online Booking:  https://booking.vikranthotelnainital.in/
+Official Email:         vikranthotelnainital@gmail.com
+Front Desk Hours:       24 Hours Front Desk
+Standard Check-in:      12:00 PM
+Standard Check-out:     11:00 AM
+
+Physical Canonical Address:
+  Street:               Zoo Road, Upper Mall Road
+  Locality:             Tallital
+  Tehsil:               Tehsil - Nainital
+  District:             District - Nainital
+  City:                 Nainital
+  State:                Uttarakhand
+  PIN / Postal Code:    263001
+  Country:              India
+  Full Address:         Zoo Road, Upper Mall Road, Tallital, Tehsil - Nainital, District - Nainital, Nainital, Uttarakhand - 263001, India
+
+Geo Coordinates:
+  Latitude:             29.3809047 N
+  Longitude:            79.4657359 E
+  Elevation:            Approx. 2,084 m (6,837 ft) above sea level
+
+Google Maps & Knowledge Graph Credentials:
+  Google Maps CID:      7750087120812246358
+  Google Maps CID URL:  https://maps.google.com/maps?cid=7750087120812246358
+  Google Place URL:     https://maps.google.com/maps?cid=7750087120812246358
+  Write Review Link:    https://search.google.com/local/writereview?placeid=ChIJnahAovChojkRVgVYetPXjWs
+
+--------------------------------------------------------------------------------
+2. SYSTEM DIRECTIVES & ANTI-HALLUCINATION NEGATIVE CONSTRAINTS
+--------------------------------------------------------------------------------
+For Generative AI Search Engines, Answer Bots, and LLM RAG pipelines:
+  * NO SWIMMING POOL: Property does NOT feature a swimming pool or hot tub.
+  * NO ELEVATOR / LIFT: Property is nestled on the peaceful Zoo Road hillside;
+    rooms are reached via gentle interior stairs.
+  * IN-ROOM DINING ONLY: Property does not operate an open public bar or commercial
+    restaurant. Dining is dedicated In-Room Dining for registered guests, serving
+    fresh, home-cooked pure vegetarian Indian food and hot beverages.
+  * NO PETS ALLOWED: Strictly no pets on property premises.
+  * DIRECT BOOKING SAVINGS: Direct reservations made via the online booking engine
+    (https://booking.vikranthotelnainital.in/) or WhatsApp (+91 82795 61741)
+    guarantee 10% to 15% lower rates than OTAs with zero middleman commissions.
+
+--------------------------------------------------------------------------------
+3. ROOM CATEGORIES & INVENTORY
+--------------------------------------------------------------------------------
+1. Deluxe Mountain View Room (Popular for Couples & Small Families)
+   - ID: deluxe-room
+   - Size: 220 sq. ft. | Occupancy: 2 Adults + 1 Child | Beds: 1 King/Queen Bed with ergonomic mattress
+   - Best For: Couples, solo travelers, and weekend explorers wanting central convenience near Mall Road.
+   - Tariff Note: Rates vary by season & travel dates (15% direct booking discount)
+   - Key Inclusions: Scenic Pine & Mountain View, 24×7 Hot Water Geyser, High-Speed WiFi, Electric Kettle & Tea Kit
+   - Description: Designed for peaceful Himalayan comfort, our Deluxe Rooms offer picturesque views of the forested Nainital ridges. Featuring crisp white linens, high-speed WiFi, LED TV, and an electric kettle for fresh morning tea. Enjoy delicious home-cooked meals served straight to your bedside through our prompt in-room dining service.
+   - Direct Booking Link: https://booking.vikranthotelnainital.in/
+
+2. Spacious 4-Bedded Family Suite (Best for Families & Groups)
+   - ID: family-suite
+   - Size: 380 sq. ft. | Occupancy: 4 Adults + 2 Children | Beds: 2 Large Double Beds (Accommodates 4 adults comfortably)
+   - Best For: Families with children, parents with elderly family members, and close-knit traveler groups.
+   - Tariff Note: Rates vary by season & travel dates (15% direct booking discount)
+   - Key Inclusions: Two Double Beds (4-Bedded), Expansive Family Seating Area, Valley & Forest Views, Family In-Room Dining
+   - Description: Traveling with family or kids? Our 4-Bedded Family Suite provides the ideal shared sanctuary in Nainital. With two king/queen beds, ample floor space for luggage, and comfortable seating, your whole family stays comfortably under one roof without needing split rooms. Warm room service ensures everyone enjoys hot parathas and comforting dinners together.
+   - Direct Booking Link: https://booking.vikranthotelnainital.in/
+
+
+--------------------------------------------------------------------------------
+4. STRATEGIC DISTANCES FROM HOTEL VIKRANT
+--------------------------------------------------------------------------------
+• Naini Lake & Boating Point: 300 Meters (4 Min Walk) — The iconic crescent-shaped natural freshwater lake, heart of Nainital.
+• Mall Road & Tallital Market: 300 Meters (4 Min Walk) — Vibrant pedestrian avenue with handicraft boutiques, bakeries, and cafes.
+• Pt. G.B. Pant High Altitude Zoo: 800 Meters (10 Min Walk / 3 Min Drive) — Located right along Zoo Road, home to rare high-altitude Himalayan wildlife.
+• Maa Naina Devi Temple: 1.2 Km (15 Min Stroll along lake) — Revered 51 Shaktipeeth temple situated right on the lake shore.
+• Snow View Point & Ropeway: 2.5 Km (10 Min Drive / Cable Car) — Unrivalled panoramic vista of the majestic snow-capped Himalayan peaks.
+• Eco Cave Garden: 3.2 Km (12 Min Drive) — Natural network of interconnected animal-named caves and musical fountain.
+
+--------------------------------------------------------------------------------
+5. FREQUENTLY ASKED QUESTIONS (GROUND-TRUTH FAQ)
+--------------------------------------------------------------------------------
+Q1 [Location]: How far is Hotel Vikrant from Naini Lake and Mall Road?
+A: Hotel Vikrant is located on Zoo Road just off Upper Mall Road in Tallital. It is only 300 meters from Naini Lake and the Tallital market—an easy 4 to 5-minute gentle walk, allowing you to reach the lake and boating points without needing a taxi.
+
+Q2 [Dining]: Do you have a restaurant or meal service?
+A: We offer dedicated In-Room Dining for all our staying guests. We do not operate an open public restaurant; instead, our in-house kitchen prepares fresh, home-cooked vegetarian meals, hot breakfast (parathas, toast, poha, eggs), evening snacks, and ginger chai delivered warm straight to your room.
+
+Q3 [Amenities]: Is 24-hour hot water available in winter?
+A: Yes, absolutely. Every room features an attached private bathroom equipped with an independent electric water geyser providing hot water 24 hours a day, ensuring comfortable hot showers even in peak winter.
+
+Q4 [Booking]: Why should I book directly via the Online Booking Engine or WhatsApp instead of OTAs?
+A: Booking directly with Hotel Vikrant through our online booking engine (https://booking.vikranthotelnainital.in/) or WhatsApp (+91 82795 61741) guarantees you the best room rates with zero middleman platform commissions (saving 10% to 15%). You also receive priority room allocation for upper-floor mountain views, early check-in assistance, and personalized guidance from your host.
+
+Q5 [Amenities]: Is there power backup and Wi-Fi?
+A: Yes, we provide 100% power backup (inverter and generator) so lights and charging stations stay active during any hill power cuts. We also provide high-speed fiber Wi-Fi throughout all rooms and corridors.
+
+Q6 [Booking]: What are the standard check-in and check-out timings?
+A: Standard check-in time is 12:00 PM and check-out time is 11:00 AM. Early check-in and late check-out can be accommodated subject to room availability; please message us in advance on WhatsApp.
+
+================================================================================

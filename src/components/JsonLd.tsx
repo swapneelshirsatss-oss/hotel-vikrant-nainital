@@ -105,6 +105,24 @@ export default function JsonLd({
         closes: "23:59",
       },
     },
+    potentialAction: {
+      "@type": "ReserveAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: HOTEL_DATA.bookingEngineUrl,
+        inLanguage: "en-IN",
+        actionPlatform: [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform",
+          "http://schema.org/IOSPlatform",
+          "http://schema.org/AndroidPlatform",
+        ],
+      },
+      result: {
+        "@type": "LodgingReservation",
+        name: "Hotel Vikrant Nainital Direct Room Reservation",
+      },
+    },
     knowsAbout: [
       "Nainital Tourism",
       "Naini Lake Boating Point",
@@ -262,6 +280,12 @@ export default function JsonLd({
         name: amenity,
         value: true,
       })),
+      offers: {
+        "@type": "Offer",
+        url: HOTEL_DATA.bookingEngineUrl,
+        priceCurrency: "INR",
+        availability: "https://schema.org/InStock",
+      },
       containedInPlace: { "@id": `${baseUrl}/#hotel` },
     })),
   };

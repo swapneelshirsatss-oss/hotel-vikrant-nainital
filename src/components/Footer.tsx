@@ -12,6 +12,7 @@ import {
   MessageCircle,
   Car,
   BookOpen,
+  CalendarCheck,
 } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 
@@ -148,6 +149,17 @@ export default function Footer() {
                   <span>Talk directly to the hotel host for taxi &amp; tips.</span>
                 </div>
               </li>
+              <li className="pt-2">
+                <a
+                  href={HOTEL_DATA.bookingEngineUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-xs shadow-gold-glow transition-transform hover:scale-105"
+                >
+                  <CalendarCheck className="w-3.5 h-3.5" />
+                  <span>Online Booking Engine →</span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -171,6 +183,23 @@ export default function Footer() {
                   >
                     Google Maps Place (CID: {HOTEL_DATA.googleMapsCid}) <ArrowUpRight className="w-3 h-3" />
                   </a>
+                </div>
+              </li>
+
+              {/* Direct Booking Engine Touchpoint */}
+              <li className="flex items-start gap-3">
+                <CalendarCheck className="w-4 h-4 text-[#D4A437] shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-medium text-white block">Direct Booking Engine:</span>
+                  <a
+                    href={HOTEL_DATA.bookingEngineUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#D4A437] hover:underline font-bold text-xs block mt-0.5"
+                  >
+                    booking.vikranthotelnainital.in
+                  </a>
+                  <span className="text-[11px] text-[#F4E6D2]/70">Best available rate guarantee</span>
                 </div>
               </li>
 

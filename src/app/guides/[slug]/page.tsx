@@ -15,6 +15,7 @@ import {
   HelpCircle,
   ChevronRight,
   Lightbulb,
+  CalendarCheck,
 } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
@@ -335,15 +336,25 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
+                href={HOTEL_DATA.bookingEngineUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-3.5 px-5 rounded-xl bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-xs shadow-gold-glow flex items-center justify-center gap-2 transition-transform hover:scale-[1.02] cursor-pointer"
+              >
+                <CalendarCheck className="w-4 h-4" />
+                <span>Book Direct & Save 15%</span>
+              </a>
+
+              <a
                 href={`https://wa.me/${HOTEL_DATA.whatsappNumber}?text=${encodeURIComponent(
                   `Hi Hotel Vikrant! I was reading your guide "${guide.title}" and would like to check room availability and direct booking rates.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-3.5 px-5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs shadow-whatsapp-glow flex items-center justify-center gap-2 transition-transform hover:scale-[1.02] cursor-pointer"
+                className="py-3.5 px-5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs shadow-whatsapp-glow flex items-center justify-center gap-2 transition-transform hover:scale-[1.02] cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4 fill-current" />
-                <span>Check Rates on WhatsApp (15% Off)</span>
+                <span>WhatsApp Rates</span>
               </a>
 
               <a
@@ -351,7 +362,7 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
                 className="py-3.5 px-5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 flex items-center justify-center gap-2 transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#D4A437]" />
-                <span>Call Front Desk: {HOTEL_DATA.phoneFormatted}</span>
+                <span>Call: {HOTEL_DATA.phoneFormatted}</span>
               </a>
             </div>
           </div>

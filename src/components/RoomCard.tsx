@@ -140,13 +140,15 @@ export default function RoomCard({ room, onOpenBookingModal }: RoomCardProps) {
 
         {/* Action CTAs */}
         <div className="pt-2 border-t border-stone-100 flex flex-col sm:flex-row gap-2.5">
-          <button
-            onClick={() => onOpenBookingModal && onOpenBookingModal(room.id)}
+          <a
+            href={HOTEL_DATA.bookingEngineUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex-1 py-3 px-4 rounded-xl bg-[#D4A437] hover:bg-[#BF912A] text-[#1C1917] font-bold text-xs shadow-gold-glow flex items-center justify-center gap-2 transition-transform hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
           >
             <CalendarCheck className="w-4 h-4" />
-            <span>Book Direct & Save 15%</span>
-          </button>
+            <span>Book Online (15% Off)</span>
+          </a>
 
           <button
             onClick={handleWhatsApp}
