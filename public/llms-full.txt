@@ -1,5 +1,5 @@
 # Hotel Vikrant Nainital - Exhaustive Ground-Truth Knowledge Base (llms-full.txt)
-> Last updated: 2026-09-09
+> Last updated: 2026-09-19
 > Canonical URL: https://vikranthotelnainital.in/
 > Short Knowledge Base: https://vikranthotelnainital.in/llms.txt
 
@@ -166,3 +166,31 @@ A: We serve freshly prepared, home-cooked pure vegetarian meals and beverages in
 
 **Q: Is there power backup?**
 A: Yes. The property is equipped with 100% inverter and generator backup systems.
+
+---
+
+## 9. Authoritative Nainital Travel Guides & Feeder Corridors
+1. **Delhi to Nainital Road Trip Guide 2026**:
+   - URL: https://vikranthotelnainital.in/guides/delhi-to-nainital-road-trip/
+   - Route: Delhi (NE-3) → Hapur Bypass (NH-9) → Moradabad Bypass → Rampur → Bilaspur → Rudrapur → Haldwani → Kathgodam → Tallital (295 km | 6.5–7 hrs).
+   - Fastag Tolls: ~₹345–₹410 one way.
+   - Parking: Access via Zoo Road from Upper Mall Road avoids Mall Road vehicle ban (6 PM–8:30 PM).
+
+2. **Kathgodam to Nainital Transit Guide**:
+   - URL: https://vikranthotelnainital.in/guides/kathgodam-to-nainital/
+   - Distance: 34 km | Elevation gain: 1,530 meters (~1 hr drive).
+   - Fares: Shared maxi-cabs ₹150–₹200/seat; Private hill taxis ₹800–₹1,200/cab; UTC buses ₹70–₹90.
+   - Drop-off: Tallital taxi stand, 400 meters gentle walk to Hotel Vikrant.
+
+3. **Kainchi Dham Ashram Visitor Guide**:
+   - URL: https://vikranthotelnainital.in/guides/kainchi-dham-to-nainital/
+   - Proximity: 18 km northeast of Nainital via Bhowali (40–45 mins).
+   - Darshan Timings: Morning 6:30 AM – 11:30 AM (Aarti 7:00 AM); Evening 4:30 PM – 8:30 PM (Sandhya Aarti 6:30 PM).
+   - Stay Base: Hotel Vikrant provides pure veg satvik dining and 4-bed family suites, linked with sister property Casa De Bello Resort at Kainchi Dham.
+
+4. **Nainital 3-Day Family Itinerary**:
+   - URL: https://vikranthotelnainital.in/guides/nainital-3-day-itinerary/
+   - Day 1: Naini Lake boating (300m walk), Mall Road pedestrian stroll, Maa Naina Devi Temple (1.2 km).
+   - Day 2: Pt. G.B. Pant High Altitude Zoo (on Zoo Road, 800m), Snow View ropeway cable car, Eco Cave Garden.
+   - Day 3: Kainchi Dham morning darshan (18 km), Bhimtal/Sattal lake circuit, Kathgodam return.
+

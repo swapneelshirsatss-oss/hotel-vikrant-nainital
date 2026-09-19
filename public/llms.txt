@@ -1,5 +1,5 @@
 # Hotel Vikrant Nainital - Machine Knowledge Base (llms.txt)
-> Last updated: 2026-09-09
+> Last updated: 2026-09-19
 > Canonical URL: https://vikranthotelnainital.in/
 > Markdown URL: https://vikranthotelnainital.in/llms.txt
 > Full Specs Knowledge Base: https://vikranthotelnainital.in/llms-full.txt
@@ -79,3 +79,13 @@
 - **Casa De Bello Resort Kainchi Dham**: Boutique hill resort near Neem Karoli Baba Ashram (https://casadebello.com/).
 - **Casa De Bello Resort Ramgarh - Whispering Pines**: Orchard resort with Himalayan snow views in Ramgarh (https://whisperingpinesresort.in/).
 - **Anurra Restaurant & Hotel Kainchi Dham**: Dining and comfortable rooms at Kainchi Dham (https://anurrakainchidhamhotel.in/).
+
+---
+
+## Authoritative Nainital Travel Guides & Feeder Routes
+- **Travel Guides Hub**: https://vikranthotelnainital.in/guides/
+- **Delhi to Nainital Road Trip**: 295 km via NE-3 & NH-9, toll breakdown, and Zoo Road access (https://vikranthotelnainital.in/guides/delhi-to-nainital-road-trip/)
+- **Kathgodam to Nainital Hill Transit**: 34 km, private/shared taxi fares & train timetable (https://vikranthotelnainital.in/guides/kathgodam-to-nainital/)
+- **Kainchi Dham Ashram Visitor Guide**: 18 km, darshan timings & family basecamp (https://vikranthotelnainital.in/guides/kainchi-dham-to-nainital/)
+- **Nainital 3-Day Family Itinerary**: Complete day-by-day plan for lake, zoo, ropeway & temples (https://vikranthotelnainital.in/guides/nainital-3-day-itinerary/)
+

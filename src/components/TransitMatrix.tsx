@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   Navigation,
   Car,
@@ -12,6 +13,7 @@ import {
   Compass,
   ArrowRight,
   ShieldCheck,
+  BookOpen,
 } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 
@@ -111,6 +113,20 @@ export default function TransitMatrix() {
             </a>
           </div>
 
+          <div className="p-3.5 rounded-2xl bg-white border border-[#2E5D4B]/20 shadow-xs flex items-center justify-between gap-3 text-xs">
+            <div className="flex items-center gap-2 text-stone-700">
+              <BookOpen className="w-4 h-4 text-[#2E5D4B] shrink-0" />
+              <span>Planning your drive from Delhi NCR? Read our comprehensive highway guide with tolls and pitstops.</span>
+            </div>
+            <Link
+              href="/guides/delhi-to-nainital-road-trip/"
+              className="font-bold text-[#2E5D4B] hover:underline shrink-0 inline-flex items-center gap-1"
+            >
+              <span>Read Delhi Road Trip Guide</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {HOTEL_DATA.feederCorridors.map((route) => (
               <div
@@ -118,11 +134,11 @@ export default function TransitMatrix() {
                 className="p-4 sm:p-5 rounded-2xl bg-[#FAF8F5] border border-stone-200 hover:border-[#5B3A29]/30 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-start justify-between gap-2 mb-2">
+                  <div className="flex items-start justify-between gap-2 mb-1.5">
                     <span className="font-serif font-bold text-base text-[#5B3A29]">
                       {route.city}
                     </span>
-                    <span className="px-2 py-0.5 rounded-full bg-[#2E5D4B]/10 text-[#2E5D4B] font-bold text-[11px] shrink-0">
+                    <span className="font-mono text-xs font-bold text-[#2E5D4B] bg-[#2E5D4B]/10 px-2 py-0.5 rounded-md shrink-0">
                       {route.distance}
                     </span>
                   </div>
@@ -169,6 +185,16 @@ export default function TransitMatrix() {
             <p className="text-stone-600 leading-relaxed">
               Upon arriving at Kathgodam station, mountain taxis and shared cabs are available 24×7 outside the terminal exit. Travel time to Tallital, Nainital is approximately 1 hour. Cabs drop at the Tallital taxi stand, from where Hotel Vikrant is an easy 400-meter stroll up Zoo Road.
             </p>
+            <div className="mt-3 pt-2.5 border-t border-amber-200/60 flex items-center justify-between">
+              <span className="text-stone-700 font-medium">Need taxi fares, shared cab tips, and station advice?</span>
+              <Link
+                href="/guides/kathgodam-to-nainital/"
+                className="font-bold text-[#5B3A29] hover:underline inline-flex items-center gap-1"
+              >
+                <span>Read Kathgodam Hill Transit Guide</span>
+                <ArrowRight className="w-3 h-3 text-[#D4A437]" />
+              </Link>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

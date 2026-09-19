@@ -16,6 +16,11 @@ const URL_LIST = [
   `https://${HOST}/gallery/`,
   `https://${HOST}/about/`,
   `https://${HOST}/contact/`,
+  `https://${HOST}/guides/`,
+  `https://${HOST}/guides/delhi-to-nainital-road-trip/`,
+  `https://${HOST}/guides/kathgodam-to-nainital/`,
+  `https://${HOST}/guides/kainchi-dham-to-nainital/`,
+  `https://${HOST}/guides/nainital-3-day-itinerary/`,
   `https://${HOST}/privacy-policy/`,
   `https://${HOST}/terms/`,
 ];

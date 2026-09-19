@@ -18,7 +18,7 @@ import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Amenities & In-Room Dining | Hotel Vikrant Nainital",
+  title: "Amenities & In-Room Home Dining: 24x7 Geyser Hot Water",
   description:
     "Explore guest amenities at Hotel Vikrant Nainital. Fresh home-cooked in-room dining, 24x7 hot water geysers, 100% power backup, high-speed WiFi, and 300m walking distance to Naini Lake.",
   alternates: {

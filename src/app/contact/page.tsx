@@ -15,7 +15,7 @@ import TransitMatrix from "@/components/TransitMatrix";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Front Desk & Directions to Zoo Road | Hotel Vikrant Nainital",
+  title: "Contact Front Desk & Directions to Zoo Road, Tallital",
   description:
     "Get in touch with Hotel Vikrant Nainital. Located on Zoo Road, 300m from Naini Lake. Direct booking inquiries, WhatsApp rates, driving directions, and local travel advice.",
   alternates: {

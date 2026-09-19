@@ -6,7 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import GalleryViewer from "@/components/GalleryViewer";
 
 export const metadata: Metadata = {
-  title: "Real Photo Gallery: Rooms, Balconies & Views | Hotel Vikrant Nainital",
+  title: "Photo Gallery: Real Photos of Rooms, Balconies & Views",
   description:
     "Explore real photos of Hotel Vikrant Nainital. See our Deluxe Mountain View Rooms, 4-Bedded Family Suites, private bathrooms, in-room dining, and scenic pine valley vistas.",
   alternates: {

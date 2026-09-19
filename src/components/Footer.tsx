@@ -11,6 +11,7 @@ import {
   ArrowUpRight,
   MessageCircle,
   Car,
+  BookOpen,
 } from "lucide-react";
 import { HOTEL_DATA } from "@/data/hotelData";
 
@@ -94,6 +95,12 @@ export default function Footer() {
               <li>
                 <Link href="/gallery/" className="hover:text-white transition-colors flex items-center justify-between group">
                   <span>Photo Gallery (50+ Real Photos)</span>
+                  <span className="text-[#D4A437] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides/" className="hover:text-white transition-colors flex items-center justify-between group">
+                  <span>Travel Guides &amp; Itineraries</span>
                   <span className="text-[#D4A437] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </Link>
               </li>
@@ -248,6 +255,42 @@ export default function Footer() {
                 </p>
                 <span className="text-xs text-[#D4A437] font-semibold inline-flex items-center gap-1 mt-2.5 group-hover:translate-x-0.5 transition-transform">
                   Explore Stay <ArrowUpRight className="w-3 h-3" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Authoritative Travel Guides & Road Trip Routes */}
+        <div className="py-8 border-b border-white/10">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+            <div className="flex items-center gap-2">
+              <BookOpen className="w-4 h-4 text-[#D4A437]" />
+              <h4 className="font-serif text-sm font-bold uppercase tracking-wider text-[#D4A437]">
+                Nainital Travel Guides &amp; Route Advice
+              </h4>
+            </div>
+            <Link
+              href="/guides/"
+              className="text-xs text-[#F4E6D2]/80 hover:text-[#D4A437] inline-flex items-center gap-1 font-medium transition-colors"
+            >
+              <span>View All Travel Guides</span>
+              <ArrowUpRight className="w-3 h-3" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {HOTEL_DATA.guides.map((guide) => (
+              <Link
+                key={guide.slug}
+                href={`/guides/${guide.slug}/`}
+                className="p-3.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-[#D4A437]/50 transition-all block group"
+              >
+                <span className="text-[10px] font-bold text-[#D4A437] uppercase tracking-wider block mb-1">
+                  {guide.category} • {guide.readingTime}
+                </span>
+                <span className="font-serif font-bold text-xs text-white group-hover:text-[#D4A437] transition-colors line-clamp-2 leading-snug">
+                  {guide.title}
                 </span>
               </Link>
             ))}

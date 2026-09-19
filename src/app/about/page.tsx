@@ -7,15 +7,16 @@ import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About Us | Heritage Family Hospitality on Zoo Road Nainital",
+  title: "About Us: Family Stay on Zoo Road, Tallital",
   description:
     "Discover Hotel Vikrant Nainital. Peaceful family-friendly accommodation on Zoo Road, Upper Mall Road, 300m from Naini Lake. Warm Kumaoni hospitality, clean mountain rooms, and fresh in-room dining.",
   alternates: {
     canonical: `${HOTEL_DATA.websiteUrl}/about/`,
   },
   openGraph: {
-    title: "About Hotel Vikrant Nainital | 300m From Naini Lake",
-    description: "Learn about Hotel Vikrant, our family stay ethos, peaceful Zoo Road location, and warm Himalayan hospitality in Nainital.",
+    title: "About Us: Family Stay on Zoo Road | Hotel Vikrant Nainital",
+    description:
+      "Learn about Hotel Vikrant, our family stay ethos, peaceful Zoo Road location, and warm Himalayan hospitality 300m from Naini Lake.",
     url: `${HOTEL_DATA.websiteUrl}/about/`,
   },
 };

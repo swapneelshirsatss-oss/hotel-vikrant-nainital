@@ -2,18 +2,42 @@ import React from "react";
 import { HOTEL_DATA } from "@/data/hotelData";
 
 interface JsonLdProps {
-  type?: "layout" | "home" | "rooms" | "about" | "amenities" | "gallery" | "attractions" | "contact";
+  type?:
+    | "layout"
+    | "home"
+    | "rooms"
+    | "about"
+    | "amenities"
+    | "gallery"
+    | "attractions"
+    | "contact"
+    | "guide"
+    | "guides-hub";
   breadcrumbItems?: { name: string; url: string }[];
   includeHotelSchema?: boolean;
+  guideData?: {
+    slug: string;
+    title: string;
+    description: string;
+    publishedDate: string;
+    modifiedDate: string;
+    author: string;
+    image: string;
+  };
 }
 
-export default function JsonLd({ type = "layout", breadcrumbItems, includeHotelSchema }: JsonLdProps) {
+export default function JsonLd({
+  type = "layout",
+  breadcrumbItems,
+  includeHotelSchema,
+  guideData,
+}: JsonLdProps) {
   const baseUrl = HOTEL_DATA.websiteUrl;
 
-  // Canonical Hotel & LodgingBusiness Schema with full Local SEO & GMB CID signals
+  // Canonical Hotel Schema with full Local SEO & GMB CID signals
   const hotelSchema = {
     "@context": "https://schema.org",
-    "@type": ["Hotel", "LodgingBusiness"],
+    "@type": ["Hotel"],
     "@id": `${baseUrl}/#hotel`,
     name: HOTEL_DATA.name,
     legalName: HOTEL_DATA.canonicalEntityName,
@@ -242,6 +266,90 @@ export default function JsonLd({ type = "layout", breadcrumbItems, includeHotelS
     })),
   };
 
+  // Attractions ItemList Schema for rich Knowledge Graph association
+  const attractionsSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${baseUrl}/attractions/#itemlist`,
+    name: "Top Attractions & Sightseeing Near Hotel Vikrant Nainital",
+    description: "Curated guide to key attractions, lakes, and viewpoints accessible from Hotel Vikrant on Zoo Road, Tallital, Nainital.",
+    numberOfItems: HOTEL_DATA.attractions.length,
+    itemListElement: HOTEL_DATA.attractions.map((attraction, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      item: {
+        "@type": "TouristAttraction",
+        name: attraction.name,
+        description: attraction.description,
+        image: `${baseUrl}${attraction.image}`,
+        url: `${baseUrl}/attractions/#${attraction.id}`,
+        publicAccess: true,
+        touristType: ["Families", "Couples", "Pilgrims"],
+        isAccessibleForFree: attraction.id === "naini-lake" || attraction.id === "mall-road",
+      },
+    })),
+  };
+
+  // Dedicated Amenities Schema
+  const amenitiesSchema = {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "@id": `${baseUrl}/amenities/#amenities`,
+    name: "Hotel Vikrant Nainital Amenities & In-Room Dining",
+    url: `${baseUrl}/amenities/`,
+    amenityFeature: HOTEL_DATA.amenitiesList.map((amenity) => ({
+      "@type": "LocationFeatureSpecification",
+      name: amenity.title,
+      description: amenity.description,
+      value: true,
+    })),
+  };
+
+  // Travel Guide Article Schema (BlogPosting)
+  const guideArticleSchema = guideData
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": `${baseUrl}/guides/${guideData.slug}/#article`,
+        isPartOf: { "@id": `${baseUrl}/#website` },
+        headline: guideData.title,
+        description: guideData.description,
+        image: guideData.image.startsWith("http") ? guideData.image : `${baseUrl}${guideData.image}`,
+        datePublished: guideData.publishedDate,
+        dateModified: guideData.modifiedDate,
+        author: {
+          "@type": "Person",
+          name: guideData.author,
+          url: `${baseUrl}/about/`,
+        },
+        publisher: {
+          "@type": "Hotel",
+          "@id": `${baseUrl}/#hotel`,
+          name: HOTEL_DATA.name,
+          logo: {
+            "@type": "ImageObject",
+            url: `${baseUrl}/images/logo/hotel-vikrant-logo.svg`,
+          },
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${baseUrl}/guides/${guideData.slug}/`,
+        },
+      }
+    : null;
+
+  // Travel Guides Hub Collection Schema
+  const guidesHubSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${baseUrl}/guides/#webpage`,
+    url: `${baseUrl}/guides/`,
+    name: "Nainital Travel Guides, Itineraries & Road Trips | Hotel Vikrant",
+    description: "Expert local travel advice, driving routes, train schedules, and sightseeing itineraries from Hotel Vikrant Nainital.",
+    isPartOf: { "@id": `${baseUrl}/#website` },
+    publisher: { "@id": `${baseUrl}/#hotel` },
+  };
+
   const breadcrumbsSchema =
     breadcrumbItems && breadcrumbItems.length > 0
       ? {
@@ -297,6 +405,20 @@ export default function JsonLd({ type = "layout", breadcrumbItems, includeHotelS
         />
       )}
 
+      {type === "amenities" && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: safeJson(amenitiesSchema) }}
+        />
+      )}
+
+      {type === "attractions" && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: safeJson(attractionsSchema) }}
+        />
+      )}
+
       {type === "contact" && (
         <script
           type="application/ld+json"
@@ -308,6 +430,20 @@ export default function JsonLd({ type = "layout", breadcrumbItems, includeHotelS
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: safeJson(gallerySchema) }}
+        />
+      )}
+
+      {type === "guides-hub" && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: safeJson(guidesHubSchema) }}
+        />
+      )}
+
+      {type === "guide" && guideArticleSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: safeJson(guideArticleSchema) }}
         />
       )}
 

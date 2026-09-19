@@ -49,6 +49,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/guides/`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    ...HOTEL_DATA.guides.map((guide) => ({
+      url: `${baseUrl}/guides/${guide.slug}/`,
+      lastModified: new Date(guide.modifiedDate),
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    })),
+    {
       url: `${baseUrl}/privacy-policy/`,
       lastModified: now,
       changeFrequency: "yearly",

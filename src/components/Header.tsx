@@ -31,6 +31,7 @@ export default function Header({ onOpenBookingModal }: HeaderProps) {
     { name: "Amenities", href: "/amenities/" },
     { name: "Gallery", href: "/gallery/" },
     { name: "Attractions", href: "/attractions/" },
+    { name: "Guides", href: "/guides/" },
     { name: "Contact", href: "/contact/" },
   ];
 

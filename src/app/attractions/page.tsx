@@ -12,15 +12,16 @@ import JsonLd from "@/components/JsonLd";
 import AttractionCard from "@/components/AttractionCard";
 
 export const metadata: Metadata = {
-  title: "Nearby Attractions & Sightseeing Guide | Hotel Vikrant Nainital",
+  title: "Nearby Sightseeing & Naini Lake Attractions Guide",
   description:
     "Explore top attractions near Hotel Vikrant Nainital. Naini Lake (300m), Mall Road, High Altitude Zoo on Zoo Road, Naina Devi Temple, and Snow View Point. Plan your Nainital sightseeing.",
   alternates: {
     canonical: `${HOTEL_DATA.websiteUrl}/attractions/`,
   },
   openGraph: {
-    title: "Nearby Attractions | Hotel Vikrant Nainital",
-    description: "Sightseeing guide for Naini Lake, Mall Road, High Altitude Zoo, and Himalayan viewpoints near Hotel Vikrant.",
+    title: "Nearby Attractions & Lake Sightseeing | Hotel Vikrant Nainital",
+    description:
+      "Sightseeing guide for Naini Lake, Mall Road, High Altitude Zoo, and Himalayan viewpoints near Hotel Vikrant.",
     url: `${HOTEL_DATA.websiteUrl}/attractions/`,
   },
 };

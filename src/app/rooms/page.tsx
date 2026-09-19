@@ -12,14 +12,14 @@ import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Deluxe Rooms & 4-Bed Family Suites | Hotel Vikrant Nainital",
+  title: "Deluxe Rooms & 4-Bed Family Suites (300m to Lake)",
   description:
     "Explore our Deluxe Mountain View Rooms and Spacious 4-Bedded Family Suites in Nainital. Equipped with 24x7 hot water geysers, high-speed WiFi, and fresh in-room dining. Book direct & save 15%.",
   alternates: {
     canonical: `${HOTEL_DATA.websiteUrl}/rooms/`,
   },
   openGraph: {
-    title: "Rooms & Suites | Hotel Vikrant Nainital Near Naini Lake",
+    title: "Deluxe Rooms & 4-Bed Family Suites | Hotel Vikrant Nainital",
     description: "Comfortable family suites & deluxe mountain rooms on Zoo Road, Nainital. 300m from Naini Lake. Direct booking discounts.",
     url: `${HOTEL_DATA.websiteUrl}/rooms/`,
   },

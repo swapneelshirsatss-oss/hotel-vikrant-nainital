@@ -4,7 +4,7 @@ import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Hotel Vikrant Nainital",
+  title: "Privacy Policy & Guest Data Guidelines",
   description: "Privacy policy for Hotel Vikrant Nainital. Learn how we handle guest information and direct reservation data.",
   alternates: {
     canonical: `${HOTEL_DATA.websiteUrl}/privacy-policy/`,

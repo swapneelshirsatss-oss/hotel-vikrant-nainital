@@ -4,7 +4,7 @@ import { HOTEL_DATA } from "@/data/hotelData";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Terms & Reservation Policy | Hotel Vikrant Nainital",
+  title: "Terms & Conditions: Reservation & Check-In Policies",
   description: "Reservation terms, check-in policies, and cancellation guidelines for Hotel Vikrant Nainital.",
   alternates: {
     canonical: `${HOTEL_DATA.websiteUrl}/terms/`,
