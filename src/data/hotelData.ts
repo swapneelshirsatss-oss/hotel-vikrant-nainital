@@ -724,15 +724,6 @@ export const HOTEL_DATA = {
       perks: ["18 km to Kainchi Dham", "1.2 km to Naina Devi Temple", "Pure vegetarian satvik dining on request", "Taxi assistance to ashram"],
       anchorLink: "/attractions/#kainchi-dham",
     },
-    {
-      persona: "Workationers & Remote Nomads",
-      badge: "High-Speed Workation",
-      title: "Himalayan Workstation with Fiber WiFi & Power Backup",
-      summary: "Stay productive with high-speed fiber internet, 100% inverter and generator power backup, fresh tea on demand, and scenic mountain views during Zoom calls.",
-      recommendedRoom: "Deluxe Mountain View Room",
-      perks: ["High-speed fiber WiFi", "100% power backup", "Ergonomic work desk setup", "Extended stay discounts"],
-      anchorLink: "/amenities/#wifi",
-    },
   ] as ThematicPersona[],
 
   guides: [

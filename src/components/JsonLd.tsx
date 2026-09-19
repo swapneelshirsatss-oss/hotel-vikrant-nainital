@@ -119,7 +119,7 @@ export default function JsonLd({
       "Families with Children",
       "Couples & Honeymooners",
       "Spiritual Pilgrims to Kainchi Dham",
-      "Remote Workationers",
+      "Budget & Lake Leisure Travelers",
       "Weekend Getaways from Delhi NCR",
     ],
     areaServed: [

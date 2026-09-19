@@ -40,7 +40,7 @@ This document provides full-scope, authoritative physical specifications, invent
 
 ### 3.1 Deluxe Mountain View Room
 - **Category Identifier**: `deluxe-room`
-- **Target Travelers**: Couples, solo travelers, business/workation guests, small families (2 adults + 1 child).
+- **Target Travelers**: Couples, solo travelers, budget leisure tourists, small families (2 adults + 1 child).
 - **Bed Configuration**: 1 King/Queen Bed with premium ergonomic mattress and sanitized fresh linens.
 - **Square Footage**: Approximately 220 square feet.
 - **Bathroom**: Attached modern private washroom equipped with individual instant electric geyser delivering continuous 24×7 hot water.
